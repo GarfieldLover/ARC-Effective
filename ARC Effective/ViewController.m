@@ -16,12 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    id obj=[[NSObject alloc] init];
+    id temp=obj;
+    id tempxx=temp;
+
+    //__strong修饰符，引用技术加1
+    NSLog(@"1 %p",obj);
+    NSLog(@"2 %p",obj);
+    NSLog(@"3 %p",temp);
+    NSLog(@"4 %p",temp);
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 
 @end
