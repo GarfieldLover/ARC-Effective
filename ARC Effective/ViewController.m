@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#include <objc/objc-runtime.h>
 @interface ViewController ()
 
 @end
@@ -27,7 +27,6 @@
     NSLog(@"3 %p",temp);
     NSLog(@"4 %p",temp);
     
-    
     id __strong obj1=[[NSObject alloc] init];
     
     @autoreleasepool {
@@ -37,7 +36,12 @@
 //        id __weak o=obj1;
 
     }
+    
+    //strong,计数为1，arc，weak直接释放
+    self.obj11=[[NSObject alloc] init];
 
+    NSLog(@"%@",self.obj11);
+    
 }
 
 

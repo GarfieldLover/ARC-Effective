@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "HTTPViewController.h"
+
+
 
 @interface AppDelegate ()
 
@@ -17,6 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    HTTPViewController* hv=[[HTTPViewController alloc] init];
+    
+    self.window.rootViewController=hv;
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    
     return YES;
 }
 
