@@ -44,7 +44,7 @@
 //        "User-Agent" = "ARC Effective/1.0 (iPhone Simulator; iOS 8.2; Scale/3.00)";
 //    }
     
-    
+    //////content-type
     //浏览器的原生 form 表单 URL-Form-Encoded Request
     //们使用表单上传文件时，multipart/form-data
     //application/json
