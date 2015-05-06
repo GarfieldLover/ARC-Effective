@@ -16,11 +16,17 @@
 	IBOutlet id portField;
 	IBOutlet id startStopButton;
 	
+    IBOutlet id textField;
+    
+    int tagnum;
+    
 	NSWindow *__unsafe_unretained window;
 }
 
 @property (unsafe_unretained) IBOutlet NSWindow *window;
 
 - (IBAction)startStop:(id)sender;
+
+- (IBAction)send:(id)sender;
 
 @end

@@ -156,7 +156,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 		[self logError:@"Error converting received data into UTF-8 String"];
 	}
 	
-	[udpSocket sendData:data toAddress:address withTimeout:-1 tag:0];
+//	[udpSocket sendData:data toAddress:address withTimeout:-1 tag:0];
 }
 
 @end

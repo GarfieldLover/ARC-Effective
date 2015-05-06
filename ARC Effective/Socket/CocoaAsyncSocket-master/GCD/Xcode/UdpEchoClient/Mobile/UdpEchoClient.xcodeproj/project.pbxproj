@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB67D721AF9125F00565CEF /* Snip20150503_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB67D701AF9125F00565CEF /* Snip20150503_2.png */; };
+		0AB67D731AF9125F00565CEF /* Snip20150503_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB67D711AF9125F00565CEF /* Snip20150503_2@2x.png */; };
 		11C32861186CDD2A00F6D762 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3285C186CDD2A00F6D762 /* DDContextFilterLogFormatter.m */; };
 		11C32862186CDD2A00F6D762 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C3285E186CDD2A00F6D762 /* DDDispatchQueueLogFormatter.m */; };
 		11C32863186CDD2A00F6D762 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C32860186CDD2A00F6D762 /* DDMultiFormatter.m */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AB67D701AF9125F00565CEF /* Snip20150503_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Snip20150503_2.png; path = UdpEchoClient/Snip20150503_2.png; sourceTree = "<group>"; };
+		0AB67D711AF9125F00565CEF /* Snip20150503_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Snip20150503_2@2x.png"; path = "UdpEchoClient/Snip20150503_2@2x.png"; sourceTree = "<group>"; };
 		11C3285A186CDD1F00F6D762 /* DDLog+LOGV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
 		11C3285B186CDD2A00F6D762 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
 		11C3285C186CDD2A00F6D762 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		DCC96ABD152E11210064C500 = {
 			isa = PBXGroup;
 			children = (
+				0AB67D701AF9125F00565CEF /* Snip20150503_2.png */,
+				0AB67D711AF9125F00565CEF /* Snip20150503_2@2x.png */,
 				DCC96AED152E11450064C500 /* Logging */,
 				DCC96B07152E114C0064C500 /* UDP */,
 				DCC96AD2152E11210064C500 /* UdpEchoClient */,
@@ -226,6 +232,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB67D721AF9125F00565CEF /* Snip20150503_2.png in Resources */,
+				0AB67D731AF9125F00565CEF /* Snip20150503_2@2x.png in Resources */,
 				DCC96AD7152E11210064C500 /* InfoPlist.strings in Resources */,
 				DC49317917F9F88F00402F77 /* Default-568h@2x.png in Resources */,
 				DCC96AE3152E11210064C500 /* ViewController.xib in Resources */,

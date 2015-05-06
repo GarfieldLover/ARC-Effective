@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB67D781AF9219400565CEF /* Snip20150503_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB67D771AF9219400565CEF /* Snip20150503_2.png */; };
 		11C32825186CDBD800F6D762 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C32820186CDBD800F6D762 /* DDContextFilterLogFormatter.m */; };
 		11C32826186CDBD800F6D762 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C32822186CDBD800F6D762 /* DDDispatchQueueLogFormatter.m */; };
 		11C32827186CDBD800F6D762 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C32824186CDBD800F6D762 /* DDMultiFormatter.m */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AB67D771AF9219400565CEF /* Snip20150503_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20150503_2.png; sourceTree = "<group>"; };
 		11C3281E186CDBBC00F6D762 /* DDLog+LOGV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "../../../../Vendor/CocoaLumberjack/DDLog+LOGV.h"; sourceTree = "<group>"; };
 		11C3281F186CDBD800F6D762 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
 		11C32820186CDBD800F6D762 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		DCDE286213DDEC74006BFCC0 /* ConnectTest */ = {
 			isa = PBXGroup;
 			children = (
+				0AB67D771AF9219400565CEF /* Snip20150503_2.png */,
 				DCDE286B13DDEC74006BFCC0 /* ConnectTestAppDelegate.h */,
 				DCDE286C13DDEC74006BFCC0 /* ConnectTestAppDelegate.m */,
 				DCDE286E13DDEC74006BFCC0 /* MainWindow.xib */,
@@ -241,6 +244,7 @@
 				DCDE287013DDEC74006BFCC0 /* MainWindow.xib in Resources */,
 				DCDE287613DDEC74006BFCC0 /* ConnectTestViewController.xib in Resources */,
 				DC90AB931477436C0022DF52 /* README.txt in Resources */,
+				0AB67D781AF9219400565CEF /* Snip20150503_2.png in Resources */,
 				DCCE5078163B6B560000C729 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

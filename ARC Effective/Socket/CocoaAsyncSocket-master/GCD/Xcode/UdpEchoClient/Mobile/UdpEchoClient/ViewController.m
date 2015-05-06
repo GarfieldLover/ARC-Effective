@@ -7,7 +7,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #define FORMAT(format, ...) [NSString stringWithFormat:(format), ##__VA_ARGS__]
 
-@interface ViewController ()
+@interface ViewController ()<GCDAsyncUdpSocketDelegate>
 {
 	long tag;
 	GCDAsyncUdpSocket *udpSocket;
@@ -233,12 +233,18 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	if ([msg length] == 0)
 	{
 		[self logError:@"Message required"];
-		return;
+//		return;
 	}
 	
-	NSData *data = [msg dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *ndata = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Snip20150503_2" ofType:@"png"]];
+    NSRange range={0,9000};
+    //最大8000多，
+    NSData* data= [ndata subdataWithRange:range];
+//    UIImageJPEGRepresentation(imageView.image, 0.1);
+//    NSData *data =  [@"dfdsfsdfdfsfsdf" dataUsingEncoding:NSUTF8StringEncoding];
 	[udpSocket sendData:data toHost:host port:port withTimeout:-1 tag:tag];
-	
+        
+    //tag数量
 	[self logMessage:FORMAT(@"SENT (%i): %@", (int)tag, msg)];
 	
 	tag++;
@@ -254,6 +260,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	// You could add checks here
 }
 
+
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didReceiveData:(NSData *)data
                                                fromAddress:(NSData *)address
                                          withFilterContext:(id)filterContext
@@ -261,7 +268,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 	if (msg)
 	{
-		[self logMessage:FORMAT(@"RECV: %@", msg)];
+		[self logMessage:FORMAT(@"从服务端RECV: %@", msg)];
 	}
 	else
 	{

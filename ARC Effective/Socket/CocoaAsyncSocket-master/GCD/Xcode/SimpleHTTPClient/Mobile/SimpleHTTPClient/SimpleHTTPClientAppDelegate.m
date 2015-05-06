@@ -8,11 +8,11 @@
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
-#define  WWW_PORT 0  // 0 => automatic
-#define  WWW_HOST @"www.amazon.com"
+#define  WWW_PORT 80  // 0 => automatic
+#define  WWW_HOST @"www.baidu.com"
 #define CERT_HOST @"www.amazon.com"
 
-#define USE_SECURE_CONNECTION    1
+#define USE_SECURE_CONNECTION    0
 #define USE_CFSTREAM_FOR_TLS     0 // Use old-school CFStream style technique
 #define MANUALLY_EVALUATE_TRUST  1
 
@@ -309,7 +309,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
 	// Since we requested HTTP/1.0, we expect the server to close the connection as soon as it has sent the response.
-	
+	//服务器给断了
 	DDLogVerbose(@"socketDidDisconnect:withError: \"%@\"", err);
 }
 

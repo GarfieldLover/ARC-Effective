@@ -7,16 +7,17 @@
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_INFO;
 
-#define USE_SECURE_CONNECTION 1
+#define USE_SECURE_CONNECTION 0
 #define ENABLE_BACKGROUNDING  0
 
 #if USE_SECURE_CONNECTION
   #define HOST @"www.paypal.com"
   #define PORT 443
 #else
-  #define HOST @"google.com"
-  #define PORT 80
+  #define HOST @"192.168.2.22"
+  #define PORT 1234
 #endif
+#define FORMAT(format, ...) [NSString stringWithFormat:(format), ##__VA_ARGS__]
 
 @implementation ConnectTestAppDelegate
 
@@ -56,7 +57,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	dispatch_queue_t mainQueue = dispatch_get_main_queue();
 	
 	asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:mainQueue];
-	
+    [asyncSocket setAutoDisconnectOnClosedReadStream:NO];
+
 	#if USE_SECURE_CONNECTION
 	{
 		NSString *host = HOST;
@@ -101,36 +103,75 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	// Add the view controller's view to the window and display.
 	[self.window addSubview:self.viewController.view];
 	[self.window makeKeyAndVisible];
-	
+    
+    [self.viewController.button addTarget:self action:@selector(send:) forControlEvents:UIControlEventTouchUpInside];
+    log=[NSMutableString string];
 	return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
+
+- (void)webViewDidFinishLoad:(UIWebView *)sender
 {
-	DDLogInfo(@"%@", THIS_METHOD);
+    NSString *scrollToBottom = @"window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);";
+    
+    [sender stringByEvaluatingJavaScriptFromString:scrollToBottom];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+- (void)logError:(NSString *)msg
 {
-	DDLogInfo(@"%@", THIS_METHOD);
+    NSString *prefix = @"<font color=\"#B40404\">";
+    NSString *suffix = @"</font><br/>";
+    
+    [log appendFormat:@"%@%@%@\n", prefix, msg, suffix];
+    
+    NSString *html = [NSString stringWithFormat:@"<html><body>\n%@\n</body></html>", log];
+    [self.viewController.webView loadHTMLString:html baseURL:nil];
+    
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+- (void)logInfo:(NSString *)msg
 {
-	DDLogInfo(@"%@", THIS_METHOD);
+    NSString *prefix = @"<font color=\"#6A0888\">";
+    NSString *suffix = @"</font><br/>";
+    
+    [log appendFormat:@"%@%@%@\n", prefix, msg, suffix];
+    
+    NSString *html = [NSString stringWithFormat:@"<html><body>\n%@\n</body></html>", log];
+    [self.viewController.webView loadHTMLString:html baseURL:nil];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void)logMessage:(NSString *)msg
 {
-	static BOOL isAppLaunch = YES;
-	if (isAppLaunch)
-	{
-		isAppLaunch = NO;
-		return;
-	}
-	
-	DDLogInfo(@"%@", THIS_METHOD);
+    self.viewController.webView.delegate=self;
+
+    NSString *prefix = @"<font color=\"#000000\">";
+    NSString *suffix = @"</font><br/>";
+    
+    [log appendFormat:@"%@%@%@\n", prefix, msg, suffix];
+    
+    NSString *html = [NSString stringWithFormat:@"<html><body>%@</body></html>", log];
+    [self.viewController.webView loadHTMLString:html baseURL:nil];
 }
+
+
+-(IBAction)send:(id)sender
+{
+    
+//    if([self.viewController.label.text isEqualToString: @"Connected"]){
+    NSString *requestStr =[NSString stringWithFormat:@"%@\r\n",self.viewController.textField.text] ;
+        NSData *requestData = [requestStr dataUsingEncoding:NSUTF8StringEncoding];
+    
+    // 可以在这里处理接受到的头部信息,tag
+        [asyncSocket writeData:requestData withTimeout:-1 tag:tagnum];
+    
+        tagnum++;
+        
+        [self logMessage:FORMAT(@"SENT (%i): %@", (int)tagnum, self.viewController.textField.text)];
+
+//    }
+    
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Socket Delegate
@@ -138,8 +179,15 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
 {
+    
 	DDLogInfo(@"socket:%p didConnectToHost:%@ port:%hu", sock, host, port);
 	self.viewController.label.text = @"Connected";
+    
+
+    [sock readDataToData:[GCDAsyncSocket CRLFData] withTimeout:-1 tag:0];
+    
+    
+    //zk,传字符串没问题，传你么的图片就根本穿不过去，只能传一点
 	
 //	DDLogInfo(@"localHost :%@ port:%hu", [sock localHost], [sock localPort]);
 	
@@ -218,6 +266,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	#endif
 }
 
+
 - (void)socketDidSecure:(GCDAsyncSocket *)sock
 {
 	DDLogInfo(@"socketDidSecure:%p", sock);
@@ -233,17 +282,31 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
 	DDLogInfo(@"socket:%p didWriteDataWithTag:%ld", sock, tag);
+//    if(tag==0){
+//        [sock readDataToData:[GCDAsyncSocket CRLFData] withTimeout:-1 tag:0];
+
+//    }
+
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
 	DDLogInfo(@"socket:%p didReadData:withTag:%ld", sock, tag);
 	
-	NSString *httpResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-	
-	DDLogInfo(@"HTTP Response:\n%@", httpResponse);
-	
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if (msg)
+        {
+            [self logMessage:FORMAT(@"从服务端RECV: %@", msg)];
+        }
+    });
+ // 等待接受服务器返回回来的数据 （以换行符为标志）
+    [asyncSocket readDataToData:[GCDAsyncSocket CRLFData] withTimeout:-1 tag:0];
+
+//    [sock writeData:data withTimeout:-1 tag:11111];
+
 }
+
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {

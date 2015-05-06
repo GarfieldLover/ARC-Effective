@@ -120,6 +120,22 @@
 	[self scrollToBottom];
 }
 
+
+- (IBAction)send:(id)sender
+{
+    for(GCDAsyncSocket* asyncSocket in connectedSockets){
+        NSString *requestStr =[NSString stringWithFormat:@"%@\r\n",[textField stringValue]] ;
+        NSData *requestData = [requestStr dataUsingEncoding:NSUTF8StringEncoding];
+        
+        [asyncSocket writeData:requestData withTimeout:-1 tag:tagnum];
+        
+        [self logMessage:[textField stringValue]];
+        tagnum++;
+    }
+
+}
+
+
 - (IBAction)startStop:(id)sender
 {
 	if(!isRunning)
@@ -194,7 +210,7 @@
 	NSString *welcomeMsg = @"Welcome to the AsyncSocket Echo Server\r\n";
 	NSData *welcomeData = [welcomeMsg dataUsingEncoding:NSUTF8StringEncoding];
 	
-	[newSocket writeData:welcomeData withTimeout:-1 tag:WELCOME_MSG];
+//	[newSocket writeData:welcomeData withTimeout:-1 tag:WELCOME_MSG];
 	
 	[newSocket readDataToData:[GCDAsyncSocket CRLFData] withTimeout:READ_TIMEOUT tag:0];
 }
@@ -231,7 +247,7 @@
 	});
 	
 	// Echo message back to client
-	[sock writeData:data withTimeout:-1 tag:ECHO_MSG];
+    [sock readDataToData:[GCDAsyncSocket CRLFData] withTimeout:-1 tag:0];
 }
 
 /**
