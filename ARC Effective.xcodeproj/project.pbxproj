@@ -531,6 +531,7 @@
 		0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketClient.xcodeproj; path = TCPSocketClient/TCPSocketClient.xcodeproj; sourceTree = "<group>"; };
 		0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketServer.xcodeproj; path = UDPSocketServer/UDPSocketServer.xcodeproj; sourceTree = "<group>"; };
 		0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketClient.xcodeproj; path = UDPSocketClient/UDPSocketClient.xcodeproj; sourceTree = "<group>"; };
+		0A91E9C11AFA672000C99AE9 /* TCPIP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPIP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -559,6 +560,7 @@
 				0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */,
 				0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */,
 				0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */,
+				0A91E9C11AFA672000C99AE9 /* TCPIP.h */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
