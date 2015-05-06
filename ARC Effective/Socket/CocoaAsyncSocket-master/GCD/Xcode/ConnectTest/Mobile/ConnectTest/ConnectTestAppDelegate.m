@@ -14,7 +14,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
   #define HOST @"www.paypal.com"
   #define PORT 443
 #else
-  #define HOST @"192.168.2.22"
+  #define HOST @"192.168.1.100"
   #define PORT 1234
 #endif
 #define FORMAT(format, ...) [NSString stringWithFormat:(format), ##__VA_ARGS__]

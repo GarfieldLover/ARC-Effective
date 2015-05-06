@@ -248,6 +248,62 @@
 			remoteGlobalIDString = 6C9A44901623CB6800A8E76A;
 			remoteInfo = Demo;
 		};
+		0A91E8D41AFA55DF00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E8AC1AFA55D500C99AE9;
+			remoteInfo = TCPSocketServer;
+		};
+		0A91E8D61AFA55DF00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E8BF1AFA55D500C99AE9;
+			remoteInfo = TCPSocketServerTests;
+		};
+		0A91E94A1AFA582A00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E91C1AFA582900C99AE9;
+			remoteInfo = TCPSocketClient;
+		};
+		0A91E94C1AFA582A00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E9351AFA582900C99AE9;
+			remoteInfo = TCPSocketClientTests;
+		};
+		0A91E97F1AFA5EBF00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E9571AFA5EBE00C99AE9;
+			remoteInfo = UDPSocketServer;
+		};
+		0A91E9811AFA5EBF00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E96A1AFA5EBE00C99AE9;
+			remoteInfo = UDPSocketServerTests;
+		};
+		0A91E9BA1AFA5EDB00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E98C1AFA5EDA00C99AE9;
+			remoteInfo = UDPSocketClient;
+		};
+		0A91E9BC1AFA5EDB00C99AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A91E9A51AFA5EDA00C99AE9;
+			remoteInfo = UDPSocketClientTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -471,6 +527,10 @@
 		0A6F43861AF6809D0011D812 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		0A6F43871AF6809D0011D812 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		0A6F43881AF6809D0011D812 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketServer.xcodeproj; path = TCPSocketServer/TCPSocketServer.xcodeproj; sourceTree = "<group>"; };
+		0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketClient.xcodeproj; path = TCPSocketClient/TCPSocketClient.xcodeproj; sourceTree = "<group>"; };
+		0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketServer.xcodeproj; path = UDPSocketServer/UDPSocketServer.xcodeproj; sourceTree = "<group>"; };
+		0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketClient.xcodeproj; path = UDPSocketClient/UDPSocketClient.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,6 +555,10 @@
 			isa = PBXGroup;
 			children = (
 				0A2B258D1AF7C99500EE0656 /* CocoaAsyncSocket-master */,
+				0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */,
+				0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */,
+				0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */,
+				0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
@@ -1197,6 +1261,42 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		0A91E8D01AFA55D500C99AE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A91E8D51AFA55DF00C99AE9 /* TCPSocketServer.app */,
+				0A91E8D71AFA55DF00C99AE9 /* TCPSocketServerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A91E9461AFA582900C99AE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A91E94B1AFA582A00C99AE9 /* TCPSocketClient.app */,
+				0A91E94D1AFA582A00C99AE9 /* TCPSocketClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A91E97B1AFA5EBE00C99AE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A91E9801AFA5EBF00C99AE9 /* UDPSocketServer.app */,
+				0A91E9821AFA5EBF00C99AE9 /* UDPSocketServerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A91E9B61AFA5EDA00C99AE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A91E9BB1AFA5EDB00C99AE9 /* UDPSocketClient.app */,
+				0A91E9BD1AFA5EDB00C99AE9 /* UDPSocketClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1299,6 +1399,14 @@
 					ProjectRef = 0A2B26041AF7C99500EE0656 /* SimpleHTTPClient.xcodeproj */;
 				},
 				{
+					ProductGroup = 0A91E9461AFA582900C99AE9 /* Products */;
+					ProjectRef = 0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A91E8D01AFA55D500C99AE9 /* Products */;
+					ProjectRef = 0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */;
+				},
+				{
 					ProductGroup = 0A2B26171AF7C99500EE0656 /* Products */;
 					ProjectRef = 0A2B26161AF7C99500EE0656 /* TestPreBuffer.xcodeproj */;
 				},
@@ -1321,6 +1429,14 @@
 				{
 					ProductGroup = 0A2B26701AF7C99500EE0656 /* Products */;
 					ProjectRef = 0A2B266F1AF7C99500EE0656 /* UdpEchoServer.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A91E9B61AFA5EDA00C99AE9 /* Products */;
+					ProjectRef = 0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A91E97B1AFA5EBE00C99AE9 /* Products */;
+					ProjectRef = 0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1428,6 +1544,62 @@
 			fileType = wrapper.application;
 			path = Demo.app;
 			remoteRef = 0A64F06D1AF9DCEB00538144 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E8D51AFA55DF00C99AE9 /* TCPSocketServer.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TCPSocketServer.app;
+			remoteRef = 0A91E8D41AFA55DF00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E8D71AFA55DF00C99AE9 /* TCPSocketServerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TCPSocketServerTests.xctest;
+			remoteRef = 0A91E8D61AFA55DF00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E94B1AFA582A00C99AE9 /* TCPSocketClient.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TCPSocketClient.app;
+			remoteRef = 0A91E94A1AFA582A00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E94D1AFA582A00C99AE9 /* TCPSocketClientTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TCPSocketClientTests.xctest;
+			remoteRef = 0A91E94C1AFA582A00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E9801AFA5EBF00C99AE9 /* UDPSocketServer.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UDPSocketServer.app;
+			remoteRef = 0A91E97F1AFA5EBF00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E9821AFA5EBF00C99AE9 /* UDPSocketServerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UDPSocketServerTests.xctest;
+			remoteRef = 0A91E9811AFA5EBF00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E9BB1AFA5EDB00C99AE9 /* UDPSocketClient.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UDPSocketClient.app;
+			remoteRef = 0A91E9BA1AFA5EDB00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A91E9BD1AFA5EDB00C99AE9 /* UDPSocketClientTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UDPSocketClientTests.xctest;
+			remoteRef = 0A91E9BC1AFA5EDB00C99AE9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

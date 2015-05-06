@@ -4,15 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Demo.xcscheme</key>
+		<key>TCPSocketServer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>15</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C9A448F1623CB6800A8E76A</key>
+		<key>0A91E8AB1AFA55D500C99AE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A91E8BE1AFA55D500C99AE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,15 +1,15 @@
 //
 //  AppDelegate.m
-//  ARC Effective
+//  UDPSocketClient
 //
-//  Created by zhangke on 15/4/29.
+//  Created by zhangke on 15/5/6.
 //  Copyright (c) 2015年 zhangke. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "HTTPViewController.h"
-
-
+#import <sys/socket.h>
+#import <netinet/in.h>
+#import <arpa/inet.h>
 
 @interface AppDelegate ()
 
@@ -17,16 +17,55 @@
 
 @implementation AppDelegate
 
-
+/*
+ *UDP/IP应用编程接口（API）
+ *客户端的工作流程：首先调用socket函数创建一个Socket，填写服务器地址及端口号，
+ *从标准输入设备中取得字符串，将字符串传送给服务器端，并接收服务器端返回的字
+ *符串。最后关闭该socket。
+ */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
+    int cli_sockfd;
+    ssize_t len;
+    socklen_t addrlen;
+    char seraddr[14]="192.168.1.100";
+    struct sockaddr_in cli_addr;
+
+    /* 建立socket*/
+    cli_sockfd=socket(AF_INET,SOCK_DGRAM,0);
+    if(cli_sockfd<0)
+    {
+        printf("I cannot socket success\n");
+        return 1;
+    }
     
-    HTTPViewController* hv=[[HTTPViewController alloc] init];
+    /* 填写sockaddr_in*/
+    addrlen=sizeof(struct sockaddr_in);
+    bzero(&cli_addr,addrlen);
+    cli_addr.sin_family=AF_INET;
+    cli_addr.sin_addr.s_addr=inet_addr(seraddr);
+    //cli_addr.sin_addr.s_addr=htonl(INADDR_ANY);
+    cli_addr.sin_port=htons(1024);
     
-    self.window.rootViewController=hv;
-    [self.window makeKeyAndVisible];
+    //将内存（字符串）前n个字节清零
+    //bzero(buffer,sizeof(buffer));
     
+    char buffer[256]="zhangke test ooookkkkk";
+    
+    /* 从标准输入设备取得字符串*/
+    //len=read(STDIN_FILENO,buffer,sizeof(buffer));
+    len=sizeof(buffer);
+    
+    /* 将字符串传送给server端*/
+    sendto(cli_sockfd,buffer,len,0,(struct sockaddr*)&cli_addr,addrlen);
+    
+    /* 接收server端返回的字符串*/
+    len=recvfrom(cli_sockfd,buffer,sizeof(buffer),0,(struct sockaddr*)&cli_addr,&addrlen);
+    
+    //printf("receive from %s\n",inet_ntoa(cli_addr.sin_addr));
+    printf("receive: %s,%ld",buffer,len);
+    
+    close(cli_sockfd);
     
     return YES;
 }
