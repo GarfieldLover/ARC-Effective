@@ -1,0 +1,629 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>HYRequestData Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">HYNetwork </a></h1>
+				<a id="developerHome" href="../index.html">zhangke</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">HYRequestData Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/appVersion">&nbsp;&nbsp;&nbsp;&nbsp;appVersion</option>
+	
+	<option value="//api/name/deviceID">&nbsp;&nbsp;&nbsp;&nbsp;deviceID</option>
+	
+	<option value="//api/name/requestBody">&nbsp;&nbsp;&nbsp;&nbsp;requestBody</option>
+	
+	<option value="//api/name/serverPath">&nbsp;&nbsp;&nbsp;&nbsp;serverPath</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/setServerPath:andDeviceID:andAppVersion:">&nbsp;&nbsp;&nbsp;&nbsp;+ setServerPath:andDeviceID:andAppVersion:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/checkAndOrganizeRequestData">&nbsp;&nbsp;&nbsp;&nbsp;- checkAndOrganizeRequestData</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appVersion">appVersion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceID">deviceID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestBody">requestBody</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/serverPath">serverPath</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setServerPath:andDeviceID:andAppVersion:">setServerPath:andDeviceID:andAppVersion:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkAndOrganizeRequestData">checkAndOrganizeRequestData</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="HYRequestData Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">HYRequestData Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">HYRequestData.h<br />HYRequestData.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>请求数据基类,任意具体业务的请求数据类可以<br/>
+继承于该类。类中定义了一些通用的方法和属性，<br/>
+派生类可以重写这些方法和增加属性适应具体业务。</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/serverPath">&nbsp;&nbsp;serverPath</a></code>
+		<span class="tooltip"><p>请求地址   例：<a href="http://192.168.1.57:8888/GIIP">http://192.168.1.57:8888/GIIP</a><br/>
+可以一次设置后，以后使用不用设置.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deviceID">&nbsp;&nbsp;deviceID</a></code>
+		<span class="tooltip"><p>设备id   例：TEST_XL_SG<br/>
+可以一次设置后，以后使用不用设置.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appVersion">&nbsp;&nbsp;appVersion</a></code>
+		<span class="tooltip"><p>app版本<br/>
+可以一次设置后，以后使用不用设置.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestBody">&nbsp;&nbsp;requestBody</a></code>
+		<span class="tooltip"><p>请求体内容，可以设置多对键值<br/>
+例：[requestBody setValue:json forKey:@&ldquo;content_json&rdquo;];<br/>
+例：[requestBody setValue:@&ldquo;Document/file/file.png&rdquo; forKey:@&ldquo;content_data&rdquo;];<br/>
+如果没有key，设置key为空 [requestBody setValue:json forKey:@&ldquo;&rdquo;];</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/checkAndOrganizeRequestData">&ndash;&nbsp;checkAndOrganizeRequestData</a></code>
+		<span class="tooltip"><p>@method 检验和组织HYNetworkData类数据，对象级方法，直接调用<br/>
+@param</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setServerPath:andDeviceID:andAppVersion:">+&nbsp;setServerPath:andDeviceID:andAppVersion:</a></code>
+		<span class="tooltip"><p>@method  设置请求地址、设备id、app版本<br/>
+@param  请求地址、设备id、app版本<br/>
+@return</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/appVersion" title="appVersion"></a>
+	<h3 class="subsubtitle method-title">appVersion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>app版本<br/>
+可以一次设置后，以后使用不用设置.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *appVersion</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>app版本<br/>
+可以一次设置后，以后使用不用设置.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYRequestData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deviceID" title="deviceID"></a>
+	<h3 class="subsubtitle method-title">deviceID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>设备id   例：TEST_XL_SG<br/>
+可以一次设置后，以后使用不用设置.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *deviceID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>设备id   例：TEST_XL_SG<br/>
+可以一次设置后，以后使用不用设置.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYRequestData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestBody" title="requestBody"></a>
+	<h3 class="subsubtitle method-title">requestBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>请求体内容，可以设置多对键值<br/>
+例：[requestBody setValue:json forKey:@&ldquo;content_json&rdquo;];<br/>
+例：[requestBody setValue:@&ldquo;Document/file/file.png&rdquo; forKey:@&ldquo;content_data&rdquo;];<br/>
+如果没有key，设置key为空 [requestBody setValue:json forKey:@&ldquo;&rdquo;];</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (retain) NSMutableDictionary *requestBody</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>请求体内容，可以设置多对键值<br/>
+例：[requestBody setValue:json forKey:@&ldquo;content_json&rdquo;];<br/>
+例：[requestBody setValue:@&ldquo;Document/file/file.png&rdquo; forKey:@&ldquo;content_data&rdquo;];<br/>
+如果没有key，设置key为空 [requestBody setValue:json forKey:@&ldquo;&rdquo;];</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYRequestData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/serverPath" title="serverPath"></a>
+	<h3 class="subsubtitle method-title">serverPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>请求地址   例：<a href="http://192.168.1.57:8888/GIIP">http://192.168.1.57:8888/GIIP</a><br/>
+可以一次设置后，以后使用不用设置.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *serverPath</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>请求地址   例：<a href="http://192.168.1.57:8888/GIIP">http://192.168.1.57:8888/GIIP</a><br/>
+可以一次设置后，以后使用不用设置.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYRequestData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/setServerPath:andDeviceID:andAppVersion:" title="setServerPath:andDeviceID:andAppVersion:"></a>
+	<h3 class="subsubtitle method-title">setServerPath:andDeviceID:andAppVersion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method  设置请求地址、设备id、app版本<br/>
+@param  请求地址、设备id、app版本<br/>
+@return</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setServerPath:(NSString *)<em>serverPath</em> andDeviceID:(NSString *)<em>deviceID</em> andAppVersion:(NSString *)<em>appVersion</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method  设置请求地址、设备id、app版本<br/>
+@param  请求地址、设备id、app版本<br/>
+@return</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYRequestData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/checkAndOrganizeRequestData" title="checkAndOrganizeRequestData"></a>
+	<h3 class="subsubtitle method-title">checkAndOrganizeRequestData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 检验和组织HYNetworkData类数据，对象级方法，直接调用<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (HYNetworkData *)checkAndOrganizeRequestData</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>检验成功则组织返回HYNetworkData类数据，否则返回nil</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 检验和组织HYNetworkData类数据，对象级方法，直接调用<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYRequestData.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 zhangke. All rights reserved. (Last updated: 2013-04-27)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

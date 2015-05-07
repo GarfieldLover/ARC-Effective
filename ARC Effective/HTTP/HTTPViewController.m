@@ -206,11 +206,11 @@
     //accept：返回合适内容
     
     //HTTP状态码
-    //1xx，请求正在处理
-    //2xx，正常处理完毕，200OK，请求被正常处理，204NoContent，请求成功但没有资源返回，206，响应范围请求
+    //1xx，请求正在处理 100，继续发送请求，102，将被执行
+    //2xx，正常处理完毕，200OK，请求被正常处理，201，建立新的资源，202，尚未处理，204NoContent，请求成功但没有资源返回，206，响应范围请求range
     //3xx，重定向，301永久性重定向，以后使用新的URL，302临时重定向，本次使用新URL，303seeother，资源存在另一个URL，304不符合条件，资源找到但不符合条件，
-    //4xx，客户端错误，400坏请求，报文存在语法错误，401没有被认证，403拒绝访问，没有权限反问该资源，404URL的资源未找到
-    //5xx，服务器错误，500内部错误，存在bug，503服务器超负荷或停机
+    //4xx，客户端错误，400坏请求，报文存在语法错误，401没有被认证，403拒绝访问，没有权限反问该资源，404URL的资源未找到，406无法满足条件，409冲突
+    //5xx，服务器错误，500内部错误，存在bug，501，不支持该功能，502，网关无响应，503服务器超负荷或停机
     
     //协作web服务器
     //单台虚拟主机实现多个域名
@@ -222,7 +222,7 @@
     //通用：Cache－Control，控制缓存，Date，创建日期，via，代理服务器
     //请求：Accept，可处理的媒体类型，Accept－Encoding，编码，Accept－Language，语言，Authorization，认证，Host，服务器，Range，范围，User－Agent，客户端信息
     //响应：Accept－Ranges，范围请求，Location，重定向URL，Retry－After，重试
-    //实体：Allow，支持的HTTP方法，Content－Encoding，编码方式，Content－Length，body大小，Content－MD5，md5编码，Content－range，范围，content－type，媒体类型
+    //实体：Allow，支持的HTTP方法，Content－Encoding，编码方式，Content－Length，body大小，Content－MD5，md5编码，Content－range，范围，content－type，媒体类型（//zk补充）
     //keep－alive，set－Cookie，cookie，
     
     //HTTPS

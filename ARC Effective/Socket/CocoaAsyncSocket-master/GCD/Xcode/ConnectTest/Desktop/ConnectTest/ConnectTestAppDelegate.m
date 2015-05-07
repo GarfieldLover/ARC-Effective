@@ -6,7 +6,7 @@
 // Log levels: off, error, warn, info, verbose
 static const int ddLogLevel = LOG_LEVEL_INFO;
 
-#define USE_SECURE_CONNECTION 0
+#define USE_SECURE_CONNECTION 1
 
 
 @implementation ConnectTestAppDelegate

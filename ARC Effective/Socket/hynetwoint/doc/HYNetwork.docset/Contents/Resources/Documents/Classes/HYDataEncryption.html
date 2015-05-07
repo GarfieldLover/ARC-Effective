@@ -1,0 +1,822 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>HYDataEncryption Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">HYNetwork </a></h1>
+				<a id="developerHome" href="../index.html">zhangke</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">HYDataEncryption Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/shareInstance">&nbsp;&nbsp;&nbsp;&nbsp;+ shareInstance</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/decryptDataUseDES:">&nbsp;&nbsp;&nbsp;&nbsp;- decryptDataUseDES:</option>
+	
+	<option value="//api/name/decryptRSAKeyWithType:plainText:">&nbsp;&nbsp;&nbsp;&nbsp;- decryptRSAKeyWithType:plainText:</option>
+	
+	<option value="//api/name/decryptStringUseDES:">&nbsp;&nbsp;&nbsp;&nbsp;- decryptStringUseDES:</option>
+	
+	<option value="//api/name/encryptDataUseDES:">&nbsp;&nbsp;&nbsp;&nbsp;- encryptDataUseDES:</option>
+	
+	<option value="//api/name/encryptRSAKeyWithType:plainText:">&nbsp;&nbsp;&nbsp;&nbsp;- encryptRSAKeyWithType:plainText:</option>
+	
+	<option value="//api/name/encryptStringUseDES:">&nbsp;&nbsp;&nbsp;&nbsp;- encryptStringUseDES:</option>
+	
+	<option value="//api/name/iosRSADecrypt:">&nbsp;&nbsp;&nbsp;&nbsp;- iosRSADecrypt:</option>
+	
+	<option value="//api/name/iosRSAEncrypt:">&nbsp;&nbsp;&nbsp;&nbsp;- iosRSAEncrypt:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareInstance">shareInstance</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decryptDataUseDES:">decryptDataUseDES:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decryptRSAKeyWithType:plainText:">decryptRSAKeyWithType:plainText:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decryptStringUseDES:">decryptStringUseDES:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encryptDataUseDES:">encryptDataUseDES:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encryptRSAKeyWithType:plainText:">encryptRSAKeyWithType:plainText:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/encryptStringUseDES:">encryptStringUseDES:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/iosRSADecrypt:">iosRSADecrypt:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/iosRSAEncrypt:">iosRSAEncrypt:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="HYDataEncryption Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">HYDataEncryption Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">HYDataEncryption.h<br />HYDataEncryption.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>该类为加密工具组件类</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shareInstance">+&nbsp;shareInstance</a></code>
+		<span class="tooltip"><p>@method 初始化单例类<br/>
+@param</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/encryptRSAKeyWithType:plainText:">&ndash;&nbsp;encryptRSAKeyWithType:plainText:</a></code>
+		<span class="tooltip"><p>@method 用开源RSA算法加密字符串</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decryptRSAKeyWithType:plainText:">&ndash;&nbsp;decryptRSAKeyWithType:plainText:</a></code>
+		<span class="tooltip"><p>@method 用开源RSA算法解密字符串</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/iosRSAEncrypt:">&ndash;&nbsp;iosRSAEncrypt:</a></code>
+		<span class="tooltip"><p>@method 用ios自带RSA算法加密字符串<br/>
+@param 1.加密字符串</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/iosRSADecrypt:">&ndash;&nbsp;iosRSADecrypt:</a></code>
+		<span class="tooltip"><p>@method 用ios自带RSA算法解密字符串，<strong><em>该方法暂时不能用</em></strong><br/>
+@param<br/>
+@return</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/encryptStringUseDES:">&ndash;&nbsp;encryptStringUseDES:</a></code>
+		<span class="tooltip"><p>@method 用DES算法加密字符串<br/>
+@param 1.加密字符串</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decryptStringUseDES:">&ndash;&nbsp;decryptStringUseDES:</a></code>
+		<span class="tooltip"><p>@method 用DES算法解密字符串<br/>
+@param 1.解密字符串</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/encryptDataUseDES:">&ndash;&nbsp;encryptDataUseDES:</a></code>
+		<span class="tooltip"><p>@method 用DES算法加密二进制数据<br/>
+@param 1.加密数据</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decryptDataUseDES:">&ndash;&nbsp;decryptDataUseDES:</a></code>
+		<span class="tooltip"><p>@method 用DES算法解密二进制数据<br/>
+@param 1.解密数据</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/shareInstance" title="shareInstance"></a>
+	<h3 class="subsubtitle method-title">shareInstance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 初始化单例类<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (HYDataEncryption *)shareInstance</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>HYNetworkEngine单例对象</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 初始化单例类<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/decryptDataUseDES:" title="decryptDataUseDES:"></a>
+	<h3 class="subsubtitle method-title">decryptDataUseDES:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用DES算法解密二进制数据<br/>
+@param 1.解密数据</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)decryptDataUseDES:(NSData *)<em>data</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>解密后的数据</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用DES算法解密二进制数据<br/>
+@param 1.解密数据</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decryptRSAKeyWithType:plainText:" title="decryptRSAKeyWithType:plainText:"></a>
+	<h3 class="subsubtitle method-title">decryptRSAKeyWithType:plainText:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用开源RSA算法解密字符串</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)decryptRSAKeyWithType:(KeyType)<em>keyType</em> plainText:(NSString *)<em>text</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>1.RSA密钥类型</em></dt>
+			<dd><p>2.解密字符串</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>解密后的字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用开源RSA算法解密字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decryptStringUseDES:" title="decryptStringUseDES:"></a>
+	<h3 class="subsubtitle method-title">decryptStringUseDES:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用DES算法解密字符串<br/>
+@param 1.解密字符串</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)decryptStringUseDES:(NSString *)<em>cipherText</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>解密后的字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用DES算法解密字符串<br/>
+@param 1.解密字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/encryptDataUseDES:" title="encryptDataUseDES:"></a>
+	<h3 class="subsubtitle method-title">encryptDataUseDES:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用DES算法加密二进制数据<br/>
+@param 1.加密数据</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)encryptDataUseDES:(NSData *)<em>data</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>加密后的数据</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用DES算法加密二进制数据<br/>
+@param 1.加密数据</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/encryptRSAKeyWithType:plainText:" title="encryptRSAKeyWithType:plainText:"></a>
+	<h3 class="subsubtitle method-title">encryptRSAKeyWithType:plainText:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用开源RSA算法加密字符串</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)encryptRSAKeyWithType:(KeyType)<em>keyType</em> plainText:(NSString *)<em>text</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>1.RSA密钥类型</em></dt>
+			<dd><p>2.加密字符串</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>加密后的字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用开源RSA算法加密字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/encryptStringUseDES:" title="encryptStringUseDES:"></a>
+	<h3 class="subsubtitle method-title">encryptStringUseDES:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用DES算法加密字符串<br/>
+@param 1.加密字符串</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)encryptStringUseDES:(NSString *)<em>clearText</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>加密后的字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用DES算法加密字符串<br/>
+@param 1.加密字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/iosRSADecrypt:" title="iosRSADecrypt:"></a>
+	<h3 class="subsubtitle method-title">iosRSADecrypt:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用ios自带RSA算法解密字符串，<strong><em>该方法暂时不能用</em></strong><br/>
+@param<br/>
+@return</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)iosRSADecrypt:(NSString *)<em>plainText</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用ios自带RSA算法解密字符串，<strong><em>该方法暂时不能用</em></strong><br/>
+@param<br/>
+@return</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/iosRSAEncrypt:" title="iosRSAEncrypt:"></a>
+	<h3 class="subsubtitle method-title">iosRSAEncrypt:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 用ios自带RSA算法加密字符串<br/>
+@param 1.加密字符串</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)iosRSAEncrypt:(NSString *)<em>plainText</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>加密后的字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 用ios自带RSA算法加密字符串<br/>
+@param 1.加密字符串</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYDataEncryption.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 zhangke. All rights reserved. (Last updated: 2013-04-27)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

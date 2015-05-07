@@ -57,7 +57,9 @@
     len=sizeof(buffer);
     
     /* 将字符串传送给server端*/
-    sendto(cli_sockfd,buffer,len,0,(struct sockaddr*)&cli_addr,addrlen);
+    ssize_t result= sendto(cli_sockfd,buffer,len,0,(struct sockaddr*)&cli_addr,addrlen);
+    //zk,好像也有发送失败,应该是内部不负责重发
+    
     
     /* 接收server端返回的字符串*/
     len=recvfrom(cli_sockfd,buffer,sizeof(buffer),0,(struct sockaddr*)&cli_addr,&addrlen);

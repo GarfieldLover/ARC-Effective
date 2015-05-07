@@ -1,0 +1,859 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>HYNetworkEngine Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">HYNetwork </a></h1>
+				<a id="developerHome" href="../index.html">zhangke</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">HYNetworkEngine Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/retryTimesOnFailure">&nbsp;&nbsp;&nbsp;&nbsp;retryTimesOnFailure</option>
+	
+	<option value="//api/name/timeOutSeconds">&nbsp;&nbsp;&nbsp;&nbsp;timeOutSeconds</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/checkNetworkConnection">&nbsp;&nbsp;&nbsp;&nbsp;+ checkNetworkConnection</option>
+	
+	<option value="//api/name/shareHYNetworkEngine">&nbsp;&nbsp;&nbsp;&nbsp;+ shareHYNetworkEngine</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/setQueueFinishBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- setQueueFinishBlock:</option>
+	
+	<option value="//api/name/setQueueStartedBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- setQueueStartedBlock:</option>
+	
+	<option value="//api/name/setStartedBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- setStartedBlock:</option>
+	
+	<option value="//api/name/startRequestWithNetworkData:">&nbsp;&nbsp;&nbsp;&nbsp;- startRequestWithNetworkData:</option>
+	
+	<option value="//api/name/startRequestWithNetworkDataArray:">&nbsp;&nbsp;&nbsp;&nbsp;- startRequestWithNetworkDataArray:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/retryTimesOnFailure">retryTimesOnFailure</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timeOutSeconds">timeOutSeconds</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkNetworkConnection">checkNetworkConnection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shareHYNetworkEngine">shareHYNetworkEngine</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setQueueFinishBlock:">setQueueFinishBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setQueueStartedBlock:">setQueueStartedBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setStartedBlock:">setStartedBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startRequestWithNetworkData:">startRequestWithNetworkData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startRequestWithNetworkDataArray:">startRequestWithNetworkDataArray:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="HYNetworkEngine Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">HYNetworkEngine Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">HYNetworkEngine.h<br />HYNetworkEngine.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>该类是网络组件核心类，利用了数据缓存机制进行数据<br/>
+传输，使用该类首先设置代理，可以判断当前联网状态后，<br/>
+进行数据传输，由代理或block方法返回数据。<br/>
+该类使用了传入传出数据的基类作为处理对象，所以不<br/>
+需要修改该类里的内容。</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>代理</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/retryTimesOnFailure">&nbsp;&nbsp;retryTimesOnFailure</a></code>
+		<span class="tooltip"><p>设置请求出错自动重试次数，默认为1次</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timeOutSeconds">&nbsp;&nbsp;timeOutSeconds</a></code>
+		<span class="tooltip"><p>请求超时时间,默认为10s</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shareHYNetworkEngine">+&nbsp;shareHYNetworkEngine</a></code>
+		<span class="tooltip"><p>@method 初始化单例类<br/>
+@param</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/checkNetworkConnection">+&nbsp;checkNetworkConnection</a></code>
+		<span class="tooltip"><p>@method 检查当前网络类型<br/>
+@param</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startRequestWithNetworkData:">&ndash;&nbsp;startRequestWithNetworkData:</a></code>
+		<span class="tooltip"><p>@method 传入HYNetworkData对象数据，自动开始请求,通过代理返回数据及进度<br/>
+@param  HYNetworkData对象<br/>
+@return</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startRequestWithNetworkDataArray:">&ndash;&nbsp;startRequestWithNetworkDataArray:</a></code>
+		<span class="tooltip"><p>@method 传入HYNetworkData对象数组，自动开始请求,通过代理返回数据及进度<br/>
+@param  HYNetworkData对象的数组<br/>
+@return</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setStartedBlock:">&ndash;&nbsp;setStartedBlock:</a></code>
+		<span class="tooltip"><p>@method 设置单个请求开始后的block方法<br/>
+@param</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setQueueStartedBlock:">&ndash;&nbsp;setQueueStartedBlock:</a></code>
+		<span class="tooltip"><p>@method 设置数组请求开始后的block方法<br/>
+@param</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setQueueFinishBlock:">&ndash;&nbsp;setQueueFinishBlock:</a></code>
+		<span class="tooltip"><p>@method 设置数组请求结束的block方法<br/>
+@param</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>代理</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;HYNetworkDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>代理</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/retryTimesOnFailure" title="retryTimesOnFailure"></a>
+	<h3 class="subsubtitle method-title">retryTimesOnFailure</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>设置请求出错自动重试次数，默认为1次</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (assign) NSInteger retryTimesOnFailure</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>设置请求出错自动重试次数，默认为1次</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timeOutSeconds" title="timeOutSeconds"></a>
+	<h3 class="subsubtitle method-title">timeOutSeconds</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>请求超时时间,默认为10s</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (assign) NSTimeInterval timeOutSeconds</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>请求超时时间,默认为10s</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/checkNetworkConnection" title="checkNetworkConnection"></a>
+	<h3 class="subsubtitle method-title">checkNetworkConnection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 检查当前网络类型<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (HYNetworkConnection)checkNetworkConnection</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>HYNetworkConnection网络连接类型</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 检查当前网络类型<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shareHYNetworkEngine" title="shareHYNetworkEngine"></a>
+	<h3 class="subsubtitle method-title">shareHYNetworkEngine</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 初始化单例类<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (HYNetworkEngine *)shareHYNetworkEngine</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>HYNetworkEngine单例对象</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 初始化单例类<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/setQueueFinishBlock:" title="setQueueFinishBlock:"></a>
+	<h3 class="subsubtitle method-title">setQueueFinishBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 设置数组请求结束的block方法<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setQueueFinishBlock:(HYQueueFinishBlock)<em>aFinishBlock</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>返回block对应类型数据</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 设置数组请求结束的block方法<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setQueueStartedBlock:" title="setQueueStartedBlock:"></a>
+	<h3 class="subsubtitle method-title">setQueueStartedBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 设置数组请求开始后的block方法<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setQueueStartedBlock:(HYQueueStartBlock)<em>aStartedBlock</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>返回block对应类型数据</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 设置数组请求开始后的block方法<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setStartedBlock:" title="setStartedBlock:"></a>
+	<h3 class="subsubtitle method-title">setStartedBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 设置单个请求开始后的block方法<br/>
+@param</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setStartedBlock:(HYNetworkStartedBlock)<em>aStartedBlock</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>返回block对应类型数据</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 设置单个请求开始后的block方法<br/>
+@param</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startRequestWithNetworkData:" title="startRequestWithNetworkData:"></a>
+	<h3 class="subsubtitle method-title">startRequestWithNetworkData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 传入HYNetworkData对象数据，自动开始请求,通过代理返回数据及进度<br/>
+@param  HYNetworkData对象<br/>
+@return</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startRequestWithNetworkData:(HYNetworkData *)<em>data</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 传入HYNetworkData对象数据，自动开始请求,通过代理返回数据及进度<br/>
+@param  HYNetworkData对象<br/>
+@return</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startRequestWithNetworkDataArray:" title="startRequestWithNetworkDataArray:"></a>
+	<h3 class="subsubtitle method-title">startRequestWithNetworkDataArray:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@method 传入HYNetworkData对象数组，自动开始请求,通过代理返回数据及进度<br/>
+@param  HYNetworkData对象的数组<br/>
+@return</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startRequestWithNetworkDataArray:(NSArray *)<em>array</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@method 传入HYNetworkData对象数组，自动开始请求,通过代理返回数据及进度<br/>
+@param  HYNetworkData对象的数组<br/>
+@return</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">HYNetworkEngine.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 zhangke. All rights reserved. (Last updated: 2013-04-27)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
