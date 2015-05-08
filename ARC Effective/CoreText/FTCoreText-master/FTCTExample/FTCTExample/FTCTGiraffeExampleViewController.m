@@ -150,30 +150,38 @@
 {
     //  You can get detailed info about the touched links
     
-    //  Name (type) of selected tag
-    NSString *tagName = [data objectForKey:FTCoreTextDataName];
-    
-    //  URL if the touched data was link
-    NSURL *url = [data objectForKey:FTCoreTextDataURL];
-    
-    //  Frame of the touched element
-    //  Notice that frame is returned as a string returned by NSStringFromCGRect function
-    CGRect touchedFrame = CGRectFromString([data objectForKey:FTCoreTextDataFrame]);
-    
-    //  You can get detailed CoreText information
-    NSDictionary *coreTextAttributes = [data objectForKey:FTCoreTextDataAttributes];
-    
-    NSLog(@"Received touched on element:\n"
-          @"Tag name: %@\n"
-          @"URL: %@\n"
-          @"Frame: %@\n"
-          @"CoreText attributes: %@",
-          tagName, url, NSStringFromCGRect(touchedFrame), coreTextAttributes
-          );
-    
-    if (url) {
-        [[UIApplication sharedApplication] openURL:url];
+    if([[data objectForKey:@"type"] isEqualToString:@"image"]){
+        UIImage* image=[data objectForKey:FTCoreTextDataAttributes];
+        
+        UIAlertView* al=[[UIAlertView alloc] initWithTitle:@"image" message:NSStringFromCGSize(image.size) delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [al show];
+    }else{
+        //  Name (type) of selected tag
+        NSString *tagName = [data objectForKey:FTCoreTextDataName];
+        
+        //  URL if the touched data was link
+        NSURL *url = [data objectForKey:FTCoreTextDataURL];
+        
+        //  Frame of the touched element
+        //  Notice that frame is returned as a string returned by NSStringFromCGRect function
+        CGRect touchedFrame = CGRectFromString([data objectForKey:FTCoreTextDataFrame]);
+        
+        //  You can get detailed CoreText information
+        NSDictionary *coreTextAttributes = [data objectForKey:FTCoreTextDataAttributes];
+        
+        NSLog(@"Received touched on element:\n"
+              @"Tag name: %@\n"
+              @"URL: %@\n"
+              @"Frame: %@\n"
+              @"CoreText attributes: %@",
+              tagName, url, NSStringFromCGRect(touchedFrame), coreTextAttributes
+              );
+        
+        if (url) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
     }
+
 
 }
 

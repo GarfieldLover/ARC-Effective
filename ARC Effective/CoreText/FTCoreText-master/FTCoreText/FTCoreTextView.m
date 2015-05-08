@@ -488,12 +488,15 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
     CGPoint origins[lineCount];
     
     if (lineCount != 0) {
-		//取得所有line的frame
+		//取得所有line的frame，都是反的，第一行的y最大，
 		CTFrameGetLineOrigins(ctframe, CFRangeMake(0, 0), origins);
 		
+        
 		for (int i = 0; i < lineCount; i++) {
 			CGPoint baselineOrigin = origins[i];
 			//the view is inverted, the y origin of the baseline is upside down
+            
+            //zk反转，self.height，有1000多
 			baselineOrigin.y = CGRectGetHeight(self.frame) - baselineOrigin.y;
 			
 			CTLineRef line = (__bridge CTLineRef)[lines objectAtIndex:i];
@@ -502,16 +505,56 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 			//反转
 			CGRect lineFrame = CGRectMake(baselineOrigin.x, baselineOrigin.y - ascent, lineWidth, ascent + descent);
 			//判断包含
+            
+            
+            //图片判断
+            CFRange cfrange = CTLineGetStringRange(line);
+            
+            for(FTCoreTextNode* imageNode in _images){
+                
+                if (cfrange.location >= imageNode.styleRange.location && cfrange.location<imageNode.styleRange.location+imageNode.styleRange.length) {
+                    
+                    //可以把frame放到imageNode 中
+                    UIImage* img = [UIImage imageNamed:imageNode.imageName];
+                    
+                    CTTextAlignment alignment = (CTTextAlignment)imageNode.style.textAlignment;
+                    
+                    int x = 0;
+                    if (alignment == kCTRightTextAlignment) x = (self.frame.size.width - img.size.width);
+                    if (alignment == kCTCenterTextAlignment) x = ((self.frame.size.width - img.size.width) / 2);
+                    //lineFrame.origin.y 得到y，已经翻转过了
+                    CGRect frame = CGRectMake(x, lineFrame.origin.y, img.size.width, img.size.height);
+                    
+                    if(CGRectContainsPoint(frame, point)){
+                        [returnedDict setObject:imageNode.imageName forKey:FTCoreTextDataName];
+                        [returnedDict setObject:img forKey:FTCoreTextDataAttributes];
+                        [returnedDict setObject:NSStringFromCGRect(frame) forKey:FTCoreTextDataFrame];
+                        [returnedDict setObject:@"image" forKey:@"type"];
+                        
+                        break;
+                    }
+                }
+                
+            }
+            
+            if(returnedDict.count>0){break;}
+            
+
+            
+            //字符串判断
+            
 			if (CGRectContainsPoint(lineFrame, point)) {
 				//we look if the position of the touch is correct on the line
 				
-                //取得字符位置
+                //根据点 取得 点击的字符位置 102
 				CFIndex index = CTLineGetStringIndexForPosition(line, point);
                 
 				NSArray *urlsKeys = [_URLs allKeys];
 				
+                //po i，第几行 CTLine
 				for (NSString *key in urlsKeys) {
 					NSRange range = NSRangeFromString(key);
+                    //根据index判断是哪个URL
 					if (index >= range.location && index < range.location + range.length) {
 						NSURL *url = [_URLs objectForKey:key];
 						if (url) [returnedDict setObject:url forKey:FTCoreTextDataURL];
@@ -574,7 +617,8 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 									CGFloat position = CTLineGetOffsetForStringIndex(line, endIndex, NULL);
 									actualRect.size.width = position - CGRectGetMinX(actualRect);
 								}
-                                //62到80 的字符串，通过截获在line中的position，开始x喝结束x，宽度等
+                                
+                                //62到80 的字符串，获取开始结束字符串位置，转换成frame，通过截获在line中的position，开始x喝结束x，宽度等
                                 //CTLineGetOffsetForStringIndex
 								actualRect = CGRectInset(actualRect, -1, 0);
 								[rectsStrings addObject:NSStringFromCGRect(actualRect)];
@@ -589,7 +633,8 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 					}
 				}
                 
-                //frame
+                
+                //frame，内容等
                 CFArrayRef runs = CTLineGetGlyphRuns(line);
                 for(CFIndex j = 0; j < CFArrayGetCount(runs); j++) {
                     CTRunRef run = CFArrayGetValueAtIndex(runs, j);
@@ -611,6 +656,8 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
                     
                     [returnedDict setObject:NSStringFromCGRect(runBounds) forKey:FTCoreTextDataFrame];
                 }
+                
+                
             }
 			if (returnedDict.count > 0) break;
 		}
@@ -646,6 +693,7 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 	if (_framesetter == NULL) {
 		return CGSizeZero;
 	}
+    //Framesetter返回指定高度
 	suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(_framesetter, CFRangeMake(0, 0), NULL, size, NULL);
 	suggestedSize = CGSizeMake(ceilf(suggestedSize.width), ceilf(suggestedSize.height));
     return suggestedSize;
@@ -1197,7 +1245,34 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 		}
 		
 		if (_processedString) {
-			
+            /*
+            Giraffe
+            
+            
+            The giraffe (Giraffa camelopardalis) is an African African African   even-toed ungulate mammal, the tallest of all extant land-living animal species, and the largest ruminant. Its scientific name, ©2011 - Wikipedia which is similar to its archaic English name of camelopard, refers to its irregular patches of color on a light background.
+            
+            
+            
+            Subspecies
+            Different authorities recognize different numbers of subspecies, ©2011 - Wikipedia differentiated by size, color and pattern variations and range. Some of these subspecies may prove to be separate species as they appear to be reproductively isolated despite their mobility. The subspecies recognized by most recent authorities are:
+            
+            ❧	G. c. camelopardalis, an unusual specimen which can only be well-described a long line of text we hope will wrap correctly when presented as an item in a bullet list.
+            ❧	G. c. reticulata
+            ❧	G. c. reticulata
+            ❧	G. c. angolensis
+            ❧	G. c. antiquorum
+            ❧	G. c. tippelskirchi
+            ❧	G. c. rothschildi
+            ❧	G. c. giraffa
+            ❧	G. c. thornicrofti
+            
+            Swimming
+            Although no definitive study has been publicly conducted, ©2011 - Wikipedia giraffes are assumed to be unable to swim. It has been estimated that the giraffe's proportionally larger limbs have very high rotational inertias and this would make rapid swimming motions strenuous.
+            
+            ©2011 - Wikipedia{
+            }
+             */
+             //处理前
 			NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:_processedString];
             
             
@@ -1239,11 +1314,14 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 				[self applyStyle:node.style inRange:node.styleRange onString:&string];
 			}
             
-        /* 每一段string 都有attributed，主要CTForegroundColor，FTCoreTextDataName，NSFont，都是key
+        //_default有，
+            
+        /* 每一段string 都有attributed，主要CTForegroundColor，FTCoreTextDataName，NSFont，NSUnderline，都是key
          Giraffe{
             CTForegroundColor = "<CGColor 0x7ffe2c3112a0> [<CGColorSpace 0x7ffe2c311280> (kCGColorSpaceDeviceGray)] ( 0 1 )";
             FTCoreTextDataName = title;
             NSFont = "<UICTFont: 0x7ffe2c23c280> font-family: \"Times New Roman\"; font-weight: normal; font-style: normal; font-size: 40.00pt";
+         NSUnderline=1;
         */
             
 			_attributedString = string;
@@ -1312,6 +1390,7 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 		}
 		
         //坐标翻转
+        //转换CTM
 		CGContextSetTextMatrix(context, CGAffineTransformIdentity);
 		CGContextTranslateCTM(context, 0, self.bounds.size.height);
 		CGContextScaleCTM(context, 1.0, -1.0);
@@ -1394,6 +1473,7 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 				[img drawInRect:CGRectIntegral(frame)];
 			}
 			
+            //下一个imagenode
 			NSInteger imageNodeIndex = [_images indexOfObject:imageNode];
 			if (imageNodeIndex < [_images count] - 1) {
 				imageNode = [_images objectAtIndex:imageNodeIndex + 1];
@@ -1461,6 +1541,11 @@ CTFontRef CTFontCreateFromUIFont(UIFont *font)
 		}
 		_touchedData = nil;
 		[_selectionsViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        //加了个灰色view
+//        view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25];
+//        [self addSubview:view];
+//        [selectedViews addObject:view];
+
 		_selectionsViews = nil;
 	}
 	[super touchesEnded:touches withEvent:event];

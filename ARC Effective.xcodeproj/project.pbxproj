@@ -1156,6 +1156,7 @@
 		0A6F43861AF6809D0011D812 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		0A6F43871AF6809D0011D812 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		0A6F43881AF6809D0011D812 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		0A8E63A11AFC685E000AA0AF /* CoreTextPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextPoint.h; sourceTree = "<group>"; };
 		0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketServer.xcodeproj; path = TCPSocketServer/TCPSocketServer.xcodeproj; sourceTree = "<group>"; };
 		0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketClient.xcodeproj; path = TCPSocketClient/TCPSocketClient.xcodeproj; sourceTree = "<group>"; };
 		0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketServer.xcodeproj; path = UDPSocketServer/UDPSocketServer.xcodeproj; sourceTree = "<group>"; };
@@ -2516,6 +2517,7 @@
 		0A4BF3FA1AFBCF8100EAAAEF /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
+				0A8E63A11AFC685E000AA0AF /* CoreTextPoint.h */,
 				0A4BF3FB1AFBCF8100EAAAEF /* FTCoreText-master */,
 			);
 			path = CoreText;
