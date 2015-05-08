@@ -4,20 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UDPSocketClient.xcscheme</key>
+		<key>CoreGraphics.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>24</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A91E98B1AFA5EDA00C99AE9</key>
+		<key>0A8E63C61AFCA9B7000AA0AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A91E9A41AFA5EDA00C99AE9</key>
+		<key>0A8E63DF1AFCA9B8000AA0AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

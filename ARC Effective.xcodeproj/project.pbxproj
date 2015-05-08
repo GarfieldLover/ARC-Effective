@@ -393,6 +393,20 @@
 			remoteGlobalIDString = 6C9A44901623CB6800A8E76A;
 			remoteInfo = Demo;
 		};
+		0A8E63F51AFCA9B8000AA0AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A8E63F01AFCA9B8000AA0AF /* CoreGraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A8E63C71AFCA9B7000AA0AF;
+			remoteInfo = CoreGraphics;
+		};
+		0A8E63F71AFCA9B8000AA0AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A8E63F01AFCA9B8000AA0AF /* CoreGraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A8E63E01AFCA9B8000AA0AF;
+			remoteInfo = CoreGraphicsTests;
+		};
 		0A91E8D41AFA55DF00C99AE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */;
@@ -1157,6 +1171,7 @@
 		0A6F43871AF6809D0011D812 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		0A6F43881AF6809D0011D812 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		0A8E63A11AFC685E000AA0AF /* CoreTextPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextPoint.h; sourceTree = "<group>"; };
+		0A8E63F01AFCA9B8000AA0AF /* CoreGraphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreGraphics.xcodeproj; path = CoreGraphics/CoreGraphics.xcodeproj; sourceTree = "<group>"; };
 		0A91E8CF1AFA55D500C99AE9 /* TCPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketServer.xcodeproj; path = TCPSocketServer/TCPSocketServer.xcodeproj; sourceTree = "<group>"; };
 		0A91E9451AFA582900C99AE9 /* TCPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCPSocketClient.xcodeproj; path = TCPSocketClient/TCPSocketClient.xcodeproj; sourceTree = "<group>"; };
 		0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketServer.xcodeproj; path = UDPSocketServer/UDPSocketServer.xcodeproj; sourceTree = "<group>"; };
@@ -2654,6 +2669,7 @@
 				0A5380A71AF0E95900847D79 /* AppDelegate.m */,
 				0A5380A91AF0E95900847D79 /* ViewController.h */,
 				0A5380AA1AF0E95900847D79 /* ViewController.m */,
+				0A8E63BD1AFCA991000AA0AF /* CoreGraphics */,
 				0A4BF3FA1AFBCF8100EAAAEF /* CoreText */,
 				0A6F435F1AF6809D0011D812 /* HTTP */,
 				0A2B258C1AF7C99500EE0656 /* Socket */,
@@ -2789,6 +2805,23 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		0A8E63BD1AFCA991000AA0AF /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E63F01AFCA9B8000AA0AF /* CoreGraphics.xcodeproj */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		0A8E63F11AFCA9B8000AA0AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E63F61AFCA9B8000AA0AF /* CoreGraphics.app */,
+				0A8E63F81AFCA9B8000AA0AF /* CoreGraphicsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0A91E8D01AFA55D500C99AE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2909,6 +2942,10 @@
 				{
 					ProductGroup = 0A2B25D21AF7C99500EE0656 /* Products */;
 					ProjectRef = 0A2B25D11AF7C99500EE0656 /* ConnectTest.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A8E63F11AFCA9B8000AA0AF /* Products */;
+					ProjectRef = 0A8E63F01AFCA9B8000AA0AF /* CoreGraphics.xcodeproj */;
 				},
 				{
 					ProductGroup = 0A64F05F1AF9DCEB00538144 /* Products */;
@@ -3123,6 +3160,20 @@
 			fileType = wrapper.application;
 			path = Demo.app;
 			remoteRef = 0A64F06D1AF9DCEB00538144 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A8E63F61AFCA9B8000AA0AF /* CoreGraphics.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CoreGraphics.app;
+			remoteRef = 0A8E63F51AFCA9B8000AA0AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A8E63F81AFCA9B8000AA0AF /* CoreGraphicsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreGraphicsTests.xctest;
+			remoteRef = 0A8E63F71AFCA9B8000AA0AF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0A91E8D51AFA55DF00C99AE9 /* TCPSocketServer.app */ = {
