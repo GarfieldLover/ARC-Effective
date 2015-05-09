@@ -344,6 +344,20 @@
 			remoteGlobalIDString = DC88553F15325C5A00514FD7;
 			remoteInfo = UdpEchoServer;
 		};
+		0A3D59D41AFDDD04002F6740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3D59CF1AFDDD03002F6740 /* CoreAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A3D59A61AFDDD03002F6740;
+			remoteInfo = CoreAnimation;
+		};
+		0A3D59D61AFDDD04002F6740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3D59CF1AFDDD03002F6740 /* CoreAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A3D59BF1AFDDD03002F6740;
+			remoteInfo = CoreAnimationTests;
+		};
 		0A40189E1AFBD09A00AEFAB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A4018381AFBD09A00AEFAB8 /* HYNetwork.xcodeproj */;
@@ -622,6 +636,7 @@
 		0A2B26CA1AF7C99500EE0656 /* DDMultiFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMultiFormatter.h; sourceTree = "<group>"; };
 		0A2B26CB1AF7C99500EE0656 /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
 		0A2B26CC1AF7C99500EE0656 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		0A3D59CF1AFDDD03002F6740 /* CoreAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreAnimation.xcodeproj; path = CoreAnimation/CoreAnimation.xcodeproj; sourceTree = "<group>"; };
 		0A4016541AFBD09900AEFAB8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A4016551AFBD09900AEFAB8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A4016561AFBD09900AEFAB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -1760,6 +1775,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0A3D597F1AFDDCF8002F6740 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0A3D59CF1AFDDD03002F6740 /* CoreAnimation.xcodeproj */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		0A3D59D01AFDDD03002F6740 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A3D59D51AFDDD04002F6740 /* CoreAnimation.app */,
+				0A3D59D71AFDDD04002F6740 /* CoreAnimationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0A4016501AFBD09900AEFAB8 /* hynetwoint */ = {
 			isa = PBXGroup;
 			children = (
@@ -2669,6 +2701,7 @@
 				0A5380A71AF0E95900847D79 /* AppDelegate.m */,
 				0A5380A91AF0E95900847D79 /* ViewController.h */,
 				0A5380AA1AF0E95900847D79 /* ViewController.m */,
+				0A3D597F1AFDDCF8002F6740 /* CoreAnimation */,
 				0A8E63BD1AFCA991000AA0AF /* CoreGraphics */,
 				0A4BF3FA1AFBCF8100EAAAEF /* CoreText */,
 				0A6F435F1AF6809D0011D812 /* HTTP */,
@@ -2944,6 +2977,10 @@
 					ProjectRef = 0A2B25D11AF7C99500EE0656 /* ConnectTest.xcodeproj */;
 				},
 				{
+					ProductGroup = 0A3D59D01AFDDD03002F6740 /* Products */;
+					ProjectRef = 0A3D59CF1AFDDD03002F6740 /* CoreAnimation.xcodeproj */;
+				},
+				{
 					ProductGroup = 0A8E63F11AFCA9B8000AA0AF /* Products */;
 					ProjectRef = 0A8E63F01AFCA9B8000AA0AF /* CoreGraphics.xcodeproj */;
 				},
@@ -3118,6 +3155,20 @@
 			fileType = wrapper.application;
 			path = UdpEchoServer.app;
 			remoteRef = 0A2B277F1AF7C99600EE0656 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A3D59D51AFDDD04002F6740 /* CoreAnimation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CoreAnimation.app;
+			remoteRef = 0A3D59D41AFDDD04002F6740 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A3D59D71AFDDD04002F6740 /* CoreAnimationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreAnimationTests.xctest;
+			remoteRef = 0A3D59D61AFDDD04002F6740 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0A40189F1AFBD09A00AEFAB8 /* HYNetwork.framework */ = {
