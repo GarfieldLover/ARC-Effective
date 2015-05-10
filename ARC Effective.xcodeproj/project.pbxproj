@@ -250,6 +250,15 @@
 		0A6F43991AF6809D0011D812 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F43841AF6809D0011D812 /* UIProgressView+AFNetworking.m */; };
 		0A6F439A1AF6809D0011D812 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F43861AF6809D0011D812 /* UIRefreshControl+AFNetworking.m */; };
 		0A6F439B1AF6809D0011D812 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F43881AF6809D0011D812 /* UIWebView+AFNetworking.m */; };
+		0AA0F4B41AFF90800090A49D /* AppleWatchProgrammingGuide.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4AE1AFF90800090A49D /* AppleWatchProgrammingGuide.pdf */; };
+		0AA0F4B51AFF90800090A49D /* MMWormhole-master in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4AF1AFF90800090A49D /* MMWormhole-master */; };
+		0AA0F4B61AFF90800090A49D /* SinaWeibo-WatchKit-master in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4B01AFF90800090A49D /* SinaWeibo-WatchKit-master */; };
+		0AA0F4B71AFF90800090A49D /* WatchKitCatalogUsingWatchKitInterfaceElements in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4B11AFF90800090A49D /* WatchKitCatalogUsingWatchKitInterfaceElements */; };
+		0AA0F4B81AFF90800090A49D /* WatchKitGlancesDemo-master in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4B21AFF90800090A49D /* WatchKitGlancesDemo-master */; };
+		0AA0F4B91AFF90800090A49D /* WatchKitNotificationDemo-master in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4B31AFF90800090A49D /* WatchKitNotificationDemo-master */; };
+		0AA0F4DD1AFFA00D0090A49D /* 08CF9D69-C189-420E-B493-1A56CCC606C8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4DB1AFFA00D0090A49D /* 08CF9D69-C189-420E-B493-1A56CCC606C8.png */; };
+		0AA0F4DE1AFFA00D0090A49D /* B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4DC1AFFA00D0090A49D /* B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png */; };
+		0AA0F4E01AFFA3BA0090A49D /* 6- UI Playground in Resources */ = {isa = PBXBuildFile; fileRef = 0AA0F4DF1AFFA3BA0090A49D /* 6- UI Playground */; };
 		0ACFC1AA1AFE4EAF0035EAFA /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACFC1581AFE4EAF0035EAFA /* AddViewController.m */; };
 		0ACFC1AB1AFE4EAF0035EAFA /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC1591AFE4EAF0035EAFA /* AddViewController.xib */; };
 		0ACFC1AC1AFE4EAF0035EAFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACFC15B1AFE4EAF0035EAFA /* AppDelegate.m */; };
@@ -1245,6 +1254,16 @@
 		0A91E97A1AFA5EBE00C99AE9 /* UDPSocketServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketServer.xcodeproj; path = UDPSocketServer/UDPSocketServer.xcodeproj; sourceTree = "<group>"; };
 		0A91E9B51AFA5EDA00C99AE9 /* UDPSocketClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UDPSocketClient.xcodeproj; path = UDPSocketClient/UDPSocketClient.xcodeproj; sourceTree = "<group>"; };
 		0A91E9C11AFA672000C99AE9 /* TCPIP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPIP.h; sourceTree = "<group>"; };
+		0AA0F4AE1AFF90800090A49D /* AppleWatchProgrammingGuide.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AppleWatchProgrammingGuide.pdf; sourceTree = "<group>"; };
+		0AA0F4AF1AFF90800090A49D /* MMWormhole-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "MMWormhole-master"; sourceTree = "<group>"; };
+		0AA0F4B01AFF90800090A49D /* SinaWeibo-WatchKit-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SinaWeibo-WatchKit-master"; sourceTree = "<group>"; };
+		0AA0F4B11AFF90800090A49D /* WatchKitCatalogUsingWatchKitInterfaceElements */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WatchKitCatalogUsingWatchKitInterfaceElements; sourceTree = "<group>"; };
+		0AA0F4B21AFF90800090A49D /* WatchKitGlancesDemo-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "WatchKitGlancesDemo-master"; sourceTree = "<group>"; };
+		0AA0F4B31AFF90800090A49D /* WatchKitNotificationDemo-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "WatchKitNotificationDemo-master"; sourceTree = "<group>"; };
+		0AA0F4DA1AFF97B10090A49D /* Watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Watch.h; sourceTree = "<group>"; };
+		0AA0F4DB1AFFA00D0090A49D /* 08CF9D69-C189-420E-B493-1A56CCC606C8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08CF9D69-C189-420E-B493-1A56CCC606C8.png"; sourceTree = "<group>"; };
+		0AA0F4DC1AFFA00D0090A49D /* B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png"; sourceTree = "<group>"; };
+		0AA0F4DF1AFFA3BA0090A49D /* 6- UI Playground */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "6- UI Playground"; sourceTree = "<group>"; };
 		0ACFC1571AFE4EAF0035EAFA /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		0ACFC1581AFE4EAF0035EAFA /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		0ACFC1591AFE4EAF0035EAFA /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
@@ -2836,6 +2855,7 @@
 				0A5380A71AF0E95900847D79 /* AppDelegate.m */,
 				0A5380A91AF0E95900847D79 /* ViewController.h */,
 				0A5380AA1AF0E95900847D79 /* ViewController.m */,
+				0ACFC1E41AFE70730035EAFA /* WatchKit */,
 				0ACFC1341AFE4EA60035EAFA /* CoreData */,
 				0A3D597F1AFDDCF8002F6740 /* CoreAnimation */,
 				0A8E63BD1AFCA991000AA0AF /* CoreGraphics */,
@@ -3193,6 +3213,23 @@
 				0ACFC1A71AFE4EAF0035EAFA /* MagicalRecordShorthand.h */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0ACFC1E41AFE70730035EAFA /* WatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				0AA0F4AE1AFF90800090A49D /* AppleWatchProgrammingGuide.pdf */,
+				0AA0F4DB1AFFA00D0090A49D /* 08CF9D69-C189-420E-B493-1A56CCC606C8.png */,
+				0AA0F4DC1AFFA00D0090A49D /* B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png */,
+				0AA0F4DA1AFF97B10090A49D /* Watch.h */,
+				0AA0F4DF1AFFA3BA0090A49D /* 6- UI Playground */,
+				0AA0F4AF1AFF90800090A49D /* MMWormhole-master */,
+				0AA0F4B01AFF90800090A49D /* SinaWeibo-WatchKit-master */,
+				0AA0F4B11AFF90800090A49D /* WatchKitCatalogUsingWatchKitInterfaceElements */,
+				0AA0F4B21AFF90800090A49D /* WatchKitGlancesDemo-master */,
+				0AA0F4B31AFF90800090A49D /* WatchKitNotificationDemo-master */,
+			);
+			path = WatchKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3609,7 +3646,9 @@
 				0A2B27071AF7C99500EE0656 /* InfoPlist.strings in Resources */,
 				0A4018911AFBD09A00AEFAB8 /* rsakey0-pub.pem in Resources */,
 				0A4018701AFBD09A00AEFAB8 /* HYNetwork框架使用说明.docx in Resources */,
+				0AA0F4B81AFF90800090A49D /* WatchKitGlancesDemo-master in Resources */,
 				0A2B26F71AF7C99500EE0656 /* InfoPlist.strings in Resources */,
+				0AA0F4DE1AFFA00D0090A49D /* B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png in Resources */,
 				0A4BF4381AFBCF8200EAAAEF /* Default.png in Resources */,
 				0A4018921AFBD09A00AEFAB8 /* rsakey0.pem in Resources */,
 				0A64F0611AF9DCEB00538144 /* 1.PNG in Resources */,
@@ -3624,6 +3663,7 @@
 				0A2B26F11AF7C99500EE0656 /* InfoPlist.strings in Resources */,
 				0A4018421AFBD09A00AEFAB8 /* Default.png in Resources */,
 				0A2B26E91AF7C99500EE0656 /* Default-568h@2x.png in Resources */,
+				0AA0F4DD1AFFA00D0090A49D /* 08CF9D69-C189-420E-B493-1A56CCC606C8.png in Resources */,
 				0A2B27131AF7C99500EE0656 /* UdpEchoClient-Info.plist in Resources */,
 				0A2B270B1AF7C99500EE0656 /* TestPreBuffer-Info.plist in Resources */,
 				0A4018411AFBD09A00AEFAB8 /* Default-568h@2x.png in Resources */,
@@ -3636,6 +3676,7 @@
 				0A2B26E01AF7C99500EE0656 /* MainMenu.xib in Resources */,
 				0A4BF4361AFBCF8200EAAAEF /* giraffe@2x.png in Resources */,
 				0A2B26D71AF7C99500EE0656 /* BonjourServer-Info.plist in Resources */,
+				0AA0F4E01AFFA3BA0090A49D /* 6- UI Playground in Resources */,
 				0A2B274D1AF7C99500EE0656 /* README.txt in Resources */,
 				0A4018511AFBD09A00AEFAB8 /* loading.png in Resources */,
 				0A2B27221AF7C99500EE0656 /* InfoPlist.strings in Resources */,
@@ -3651,6 +3692,7 @@
 				0A4018901AFBD09A00AEFAB8 /* ios_public_key.der in Resources */,
 				0A2B27021AF7C99500EE0656 /* MainMenu.xib in Resources */,
 				0A40185E1AFBD09A00AEFAB8 /* ios_private_key.pem in Resources */,
+				0AA0F4B61AFF90800090A49D /* SinaWeibo-WatchKit-master in Resources */,
 				0A2B26FB1AF7C99500EE0656 /* SimpleHTTPClient-Info.plist in Resources */,
 				0A4018771AFBD09A00AEFAB8 /* InfoPlist.strings in Resources */,
 				0A2B271C1AF7C99500EE0656 /* Credits.rtf in Resources */,
@@ -3692,7 +3734,9 @@
 				0A4018941AFBD09A00AEFAB8 /* HYNetworkResources-Info.plist in Resources */,
 				0A4BF4351AFBCF8200EAAAEF /* giraffe.png in Resources */,
 				0A2B26F61AF7C99500EE0656 /* Default-568h@2x.png in Resources */,
+				0AA0F4B41AFF90800090A49D /* AppleWatchProgrammingGuide.pdf in Resources */,
 				0A4018781AFBD09A00AEFAB8 /* HYNetwork-Info.plist in Resources */,
+				0AA0F4B91AFF90800090A49D /* WatchKitNotificationDemo-master in Resources */,
 				0A40186F1AFBD09A00AEFAB8 /* HYNetwork.docset in Resources */,
 				0A2B27001AF7C99500EE0656 /* Credits.rtf in Resources */,
 				0A2B26CD1AF7C99500EE0656 /* .gitignore in Resources */,
@@ -3705,6 +3749,7 @@
 				0A2B26F41AF7C99500EE0656 /* SimpleHTTPClient-Info.plist in Resources */,
 				0A4BF4391AFBCF8200EAAAEF /* Default@2x.png in Resources */,
 				0ACFC1E31AFE6C6F0035EAFA /* QnEZVz.png in Resources */,
+				0AA0F4B51AFF90800090A49D /* MMWormhole-master in Resources */,
 				0A40188F1AFBD09A00AEFAB8 /* ios_private_key.pem in Resources */,
 				0A4018651AFBD09A00AEFAB8 /* Default@2x.png in Resources */,
 				0A4018601AFBD09A00AEFAB8 /* rsakey0-pub.pem in Resources */,
@@ -3724,6 +3769,7 @@
 				0A4BF43D1AFBCF8200EAAAEF /* LICENSE in Resources */,
 				0A2B26DA1AF7C99500EE0656 /* MainMenu.xib in Resources */,
 				0ACFC1DE1AFE61E90035EAFA /* 20140104145036281.png in Resources */,
+				0AA0F4B71AFF90800090A49D /* WatchKitCatalogUsingWatchKitInterfaceElements in Resources */,
 				0A2B26FE1AF7C99500EE0656 /* ReadMe.txt in Resources */,
 				0ACFC1AD1AFE4EAF0035EAFA /* Default-568h@2x.png in Resources */,
 				0A5380B01AF0E95900847D79 /* Images.xcassets in Resources */,
