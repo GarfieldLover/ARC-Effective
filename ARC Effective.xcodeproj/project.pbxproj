@@ -532,6 +532,20 @@
 			remoteGlobalIDString = 0A91E9A51AFA5EDA00C99AE9;
 			remoteInfo = UDPSocketClientTests;
 		};
+		0AA0F51B1AFFB0740090A49D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA0F5161AFFB0730090A49D /* Runtime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0AA0F4ED1AFFB0730090A49D;
+			remoteInfo = Runtime;
+		};
+		0AA0F51D1AFFB0740090A49D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA0F5161AFFB0730090A49D /* Runtime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0AA0F5061AFFB0730090A49D;
+			remoteInfo = RuntimeTests;
+		};
 		0ACFC1D21AFE4EAF0035EAFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0ACFC16A1AFE4EAF0035EAFA /* MagcalRecord Example.xcodeproj */;
@@ -1264,6 +1278,7 @@
 		0AA0F4DB1AFFA00D0090A49D /* 08CF9D69-C189-420E-B493-1A56CCC606C8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08CF9D69-C189-420E-B493-1A56CCC606C8.png"; sourceTree = "<group>"; };
 		0AA0F4DC1AFFA00D0090A49D /* B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B64B84C3-3E51-4716-B6EF-01BE2C0BA310.png"; sourceTree = "<group>"; };
 		0AA0F4DF1AFFA3BA0090A49D /* 6- UI Playground */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "6- UI Playground"; sourceTree = "<group>"; };
+		0AA0F5161AFFB0730090A49D /* Runtime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Runtime.xcodeproj; path = Runtime/Runtime.xcodeproj; sourceTree = "<group>"; };
 		0ACFC1571AFE4EAF0035EAFA /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		0ACFC1581AFE4EAF0035EAFA /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		0ACFC1591AFE4EAF0035EAFA /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
@@ -2855,6 +2870,7 @@
 				0A5380A71AF0E95900847D79 /* AppDelegate.m */,
 				0A5380A91AF0E95900847D79 /* ViewController.h */,
 				0A5380AA1AF0E95900847D79 /* ViewController.m */,
+				0AA0F4E31AFFAF500090A49D /* Runtime */,
 				0ACFC1E41AFE70730035EAFA /* WatchKit */,
 				0ACFC1341AFE4EA60035EAFA /* CoreData */,
 				0A3D597F1AFDDCF8002F6740 /* CoreAnimation */,
@@ -3043,6 +3059,23 @@
 			children = (
 				0A91E9BB1AFA5EDB00C99AE9 /* UDPSocketClient.app */,
 				0A91E9BD1AFA5EDB00C99AE9 /* UDPSocketClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AA0F4E31AFFAF500090A49D /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				0AA0F5161AFFB0730090A49D /* Runtime.xcodeproj */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		0AA0F5171AFFB0730090A49D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AA0F51C1AFFB0740090A49D /* Runtime.app */,
+				0AA0F51E1AFFB0740090A49D /* RuntimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3354,6 +3387,10 @@
 					ProjectRef = 0ACFC16A1AFE4EAF0035EAFA /* MagcalRecord Example.xcodeproj */;
 				},
 				{
+					ProductGroup = 0AA0F5171AFFB0730090A49D /* Products */;
+					ProjectRef = 0AA0F5161AFFB0730090A49D /* Runtime.xcodeproj */;
+				},
+				{
 					ProductGroup = 0A2B25F21AF7C99500EE0656 /* Products */;
 					ProjectRef = 0A2B25F11AF7C99500EE0656 /* SimpleHTTPClient.xcodeproj */;
 				},
@@ -3626,6 +3663,20 @@
 			fileType = wrapper.cfbundle;
 			path = UDPSocketClientTests.xctest;
 			remoteRef = 0A91E9BC1AFA5EDB00C99AE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AA0F51C1AFFB0740090A49D /* Runtime.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Runtime.app;
+			remoteRef = 0AA0F51B1AFFB0740090A49D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AA0F51E1AFFB0740090A49D /* RuntimeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RuntimeTests.xctest;
+			remoteRef = 0AA0F51D1AFFB0740090A49D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0ACFC1D31AFE4EAF0035EAFA /* MagcalRecord Example.app */ = {

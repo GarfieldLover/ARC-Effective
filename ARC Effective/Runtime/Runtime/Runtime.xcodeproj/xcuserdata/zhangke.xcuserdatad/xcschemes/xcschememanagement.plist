@@ -4,25 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HYNetwork.xcscheme</key>
+		<key>Runtime.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>35</integer>
-		</dict>
-		<key>HYNetworkResources.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>36</integer>
+			<integer>44</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E3075BB7172A0E5200A7EB5D</key>
+		<key>0AA0F4EC1AFFB0730090A49D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E329FD25171BEE1F00D30816</key>
+		<key>0AA0F5051AFFB0730090A49D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
