@@ -9,7 +9,30 @@
 #import "ViewController.h"
 #import <objc/runtime.h>
 
-@class MyClass;
+@interface RuntimeCategoryClass : NSObject
+- (void)method1;
+@end
+
+@interface RuntimeCategoryClass (Category)
+- (void)method2;
+@end
+
+@implementation RuntimeCategoryClass
+
+- (void)method1 {
+    
+}
+
+@end
+
+@implementation RuntimeCategoryClass (Category)
+
+- (void)method2 {
+    
+}
+
+@end
+
 
 
 @interface MyClass : NSObject <NSCopying, NSCoding>
@@ -287,32 +310,295 @@
     
     
     
+
+    
+//    
+//    // 获取成员变量名
+//    const char * ivar_getName ( Ivar v );
+//    
+//    // 获取成员变量类型编码
+//    const char * ivar_getTypeEncoding ( Ivar v );
+//    
+//    // 获取成员变量的偏移量
+//    ptrdiff_t ivar_getOffset ( Ivar v );
+//    
+//    
+//    // 获取属性名
+//    const char * property_getName ( objc_property_t property );
+//    
+//    // 获取属性特性描述字符串
+//    const char * property_getAttributes ( objc_property_t property );
+//    // 获取属性的特性列表
+////    objc_property_attribute_t * property_copyAttributeList ( objc_property_t property, unsigned int *outCount );
+//    
+//    
+//    //消息处理机制
+////    SEL , 选择器，一个方法的selector指针，
+////    typedef struct objc_selector *SEL;
+//    Objective-C在编译时，会依据每一个方法的名字、参数序列，生成一个唯一的整型标识(Int类型的地址)，这个标识就是SEL。
+//    Objective-C同一个类(及类的继承体系)中，不能存在2个同名的方法，即使参数类型不同也不行。
+//    SEL sel1 = @selector(method1);
+//    NSLog(@"sel : %p", sel1);
+//    
+//    不同类的实例对象执行相同的selector时，会在各自的方法列表中去根据selector去寻找自己对应的IMP。
+//    SEL只是一个指向方法的指针
+//    
+//    //运行时添加新的selector
+////    sel_registerName函数
+////    Objective-C编译器提供的@selector()
+////    NSSelectorFromString()方法
+//    
+//    
+//    IMP
+//    IMP实际上是一个函数指针，指向方法实现的首地址。
+//    取得IMP后，我们就获得了执行这个方法代码的入口点，此时，我们就可以像调用普通的C语言函数一样来使用这个函数指针了。
+//    通过取得IMP，我们可以跳过Runtime的消息传递机制，直接执行IMP指向的函数实现
+//    
+//    
+//    
+//    。Method用于表示类定义中的方法，实际上相当于在SEL和IMP之间作了一个映射
+//    struct objc_method {
+//        SEL method_name                 OBJC2_UNAVAILABLE;  // 方法名
+//        char *method_types                  OBJC2_UNAVAILABLE;
+//        IMP method_imp                      OBJC2_UNAVAILABLE;  // 方法实现
+//    }
+//    
+//    // 获取方法名
+//    SEL method_getName ( Method m );
+//    
+//    // 返回方法的实现
+//    IMP method_getImplementation ( Method m );
+//    
+//    // 设置方法的实现
+//    IMP method_setImplementation ( Method m, IMP imp );
+//
+//    // 返回给定选择器指定的方法的名称
+//    const char * sel_getName ( SEL sel );
+//
+//
+//
+//    方法调用流程
+//    消息直到运行时才绑定到方法实现上。编译器会将消息表达式[receiver message]转化为一个消息函数的调用，即objc_msgSend
+//   
+//    objc_msgSend(receiver, selector, arg1, arg2, ...)
+//    
+//    
+//    
+//    ＊＊＊我们在分发消息的关注的：
+//    指向父类的指针
+//    一个类的方法分发表，即methodLists。
+//    
+//    
+//    当消息发送给一个对象时，objc_msgSend通过对象的isa指针获取到类的结构体，然后在方法分发表里面查找方法的selector。如果没有找到selector，则通过objc_msgSend结构体中的指向父类的指针找到其父类，并在父类的分发表里面查找方法的selector。依此，会一直沿着类的继承体系到达NSObject类。一旦定位到selector，函数会就获取到了实现的入口点，并传入相应的参数来执行方法的具体实现。如果最后没有定位到selector，则会走消息转发流程，这个我们在后面讨论。
+//    
+//    IMP, 返回函数指针
+//    [ self  methodForSelector:@selector(<#selector#>)
+//    
+//     
+//     
+//     是以perform…的形式来调用，则需要等到运行时才能确定object是否能接收message消息。如果不能，则程序崩溃。
+//
+//     当一个对象无法接收某一消息时，就会启动所谓”消息转发(message forwarding)“机制，
+//     -[SUTRuntimeMethod method]: unrecognized selector sent to instance 0x100111940
+//     
+//     
+//     消息转发机制基本上分为三个步骤：
+//     
+//     动态方法解析  resolveInstanceMethod
+//     备用接收者    forwardingTargetForSelector
+//     完整转发  methodSignatureForSelector  forwardInvocation  ，都可以写在父类
+//
+//      ，会一直沿着类的继承体系到达NSObject类。如果没有定位到selector，才走消息转发，如果在消息转发的3次机会还没有处理，就是调doesNotRecognizeSelector
+//
+    
+    
+//    [self performSelector:@selector(messageForwarding)];
+    
+    
+    
+//    Category
+//    
+//    Category是表示一个指向分类的结构体的指针，其定义如下：
+//    typedef struct objc_category *Category;
+//    
+//    struct objc_category {
+//        char *category_name                          OBJC2_UNAVAILABLE; // 分类名
+//        char *class_name                             OBJC2_UNAVAILABLE; // 分类所属的类名
+//        struct objc_method_list *instance_methods    OBJC2_UNAVAILABLE; // 实例方法列表
+//        struct objc_method_list *class_methods       OBJC2_UNAVAILABLE; // 类方法列表
+//        struct objc_protocol_list *protocols         OBJC2_UNAVAILABLE; // 分类所实现的协议列表
+//    }
+    
+    
+    
+    
+    
+    NSLog(@"测试objc_class中的方法列表是否包含分类中的方法");
+    unsigned int outCount = 0;
+    Method *methodList = class_copyMethodList(RuntimeCategoryClass.class, &outCount);
+    
+    for (int i = 0; i < outCount; i++) {
+        Method method = methodList[i];
+        
+        const char *name = sel_getName(method_getName(method));
+        
+        NSLog(@"RuntimeCategoryClass's method: %s", name);
+        
+        if (strcmp(name, sel_getName(@selector(method2)))) {
+            NSLog(@"分类方法method2在objc_class的方法列表中");
+        }
+    }
+    
+    
+    typedef struct objc_object Protocol;
+
+//    // 返回指定的协议
+//    Protocol * objc_getProtocol ( const char *name );
+//    // 在运行时中注册新创建的协议
+//    void objc_registerProtocol ( Protocol *proto );
+
+
+
+    
+//    super
+    
+//    首先我们需要知道的是super与self不同。self是类的一个隐藏参数，每个方法的实现的第一个参数即为self。而super并不是隐藏参数，它实际上只是一个”编译器标示符”，它负责告诉编译器，当调用viewDidLoad方法时，去调用父类的方法，而不是本类中的方法。而它实际上与self指向的是相同的消息接收者。为了理解这一点，我们先来看看super的定义：
+    
+//    struct objc_super { id receiver; Class superClass; };
+//    receiver：即消息的实际接收者
+//    superClass：指针当前类的父类
+//    
+//    
+//    ＊＊＊＊消息接受者去调父类的方法
+    
+//    发送消息时，不是调用objc_msgSend函数，而是调用objc_msgSendSuper函数，
+    
+    
+    NSLog(@"self class: %@", self.class);
+    NSLog(@"super class: %@", super.class);
+    
+//    super=[self, UIViewController]
+//    
+//    self objc_messagesentsuper
+//    {
+//        UIViewController loadview
+//    }
+    
+    NSLog(@"获取指定类所在动态库");
+    
+    NSLog(@"UIView's Framework: %s", class_getImageName(NSClassFromString(@"UIView")));
+    
+    NSLog(@"获取指定库或框架中所有类的类名");
+    const char ** classes = objc_copyClassNamesForImage(class_getImageName(NSClassFromString(@"UIView")), &outCount);
+    for (int i = 0; i < outCount; i++) {
+        NSLog(@"class name: %s", classes[i]);
+    }
+    
+    
+    
+    // 创建一个指针函数的指针，该函数调用时会调用特定的block
+    IMP imp_implementationWithBlock ( id block );
+    
+    
+    // 测试代码
+    IMP imp = imp_implementationWithBlock(^(id obj, NSString *str) {
+        NSLog(@"%@", str);
+    });
+
+    // 加载弱引用指针引用的对象并返回
+    id objc_loadWeak ( id *location );
+
+//    其中nil用于空的实例对象，而Nil用于空类对象。
+
+
+    
     
     //给分类动态添加属性，将传入的块对象连接到指定的key上
-//    objc_setAssociatedObject(<#id object#>, <#const void *key#>, <#id value#>, <#objc_AssociationPolicy policy#>)
-//    objc_getAssociatedObject(<#id object#>, <#const void *key#>)
-//    objc_removeAssociatedObjects(<#id object#>)
+    //    objc_setAssociatedObject(<#id object#>, <#const void *key#>, <#id value#>, <#objc_AssociationPolicy policy#>)
+    //    objc_getAssociatedObject(<#id object#>, <#const void *key#>)
+    //    objc_removeAssociatedObjects(<#id object#>)
     
     
-    // 获取成员变量名
-    const char * ivar_getName ( Ivar v );
-    
-    // 获取成员变量类型编码
-    const char * ivar_getTypeEncoding ( Ivar v );
-    
-    // 获取成员变量的偏移量
-    ptrdiff_t ivar_getOffset ( Ivar v );
-    
-    
-    // 获取属性名
-    const char * property_getName ( objc_property_t property );
-    
-    // 获取属性特性描述字符串
-    const char * property_getAttributes ( objc_property_t property );
-    // 获取属性的特性列表
-    objc_property_attribute_t * property_copyAttributeList ( objc_property_t property, unsigned int *outCount );
-
+//    enum {
+//        OBJC_ASSOCIATION_ASSIGN  = 0,
+//        OBJC_ASSOCIATION_RETAIN_NONATOMIC  = 1,
+//        OBJC_ASSOCIATION_COPY_NONATOMIC  = 3,
+//        OBJC_ASSOCIATION_RETAIN  = 01401,
+//        OBJC_ASSOCIATION_COPY  = 01403
+//    };
 }
+
+
+//动态方法解析
+//在这个方法中，我们有机会为该未知消息新增一个”处理方法”“。不过使用该方法的前提是我们已经实现了该”处理方法”，只需要在运行时通过class_addMethod函数动态添加到类里面就可以了
+void functionForMethod1(id self, SEL _cmd) {
+    NSLog(@"%@, %p", self, _cmd);
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    
+    NSString *selectorString = NSStringFromSelector(sel);
+    
+    if ([selectorString isEqualToString:@"method1"]) {
+        class_addMethod(self.class, @selector(method1), (IMP)functionForMethod1, "@:");
+    }
+    
+    return [super resolveInstanceMethod:sel];
+}
+
+
+//     备用接收者
+//如果一个对象实现了这个方法，并返回一个非nil的结果，则这个对象会作为消息的新接收者，且消息会被分发到这个对象。当然，如果我们没有指定相应的对象来处理aSelector，则应该调用父类的实现来返回结果。
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    
+    NSLog(@"forwardingTargetForSelector");
+    
+    NSString *selectorString = NSStringFromSelector(aSelector);
+    
+    // 将消息转发给_helper来处理
+//    if ([selectorString isEqualToString:@"method2"]) {
+//        return _helper;
+//    }
+    
+    return [super forwardingTargetForSelector:aSelector];
+}
+
+
+//     完整转发
+//运行时系统会在这一步给消息接收者最后一次机会将消息转发给其它对象。对象会创建一个表示消息的NSInvocation对象，把与尚未处理的消息有关的全部细节都封装在anInvocation中，包括selector，目标(target)和参数。我们可以在forwardInvocation方法中选择将消息转发给其它对象。
+
+//定位可以响应封装在anInvocation中的消息的对象。这个对象不需要能处理所有未知消息。
+//使用anInvocation作为参数，将消息发送到选中的对象。anInvocation将会保留调用结果，运行时系统会提取这一结果并将其发送到消息的原始发送者。
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
+    
+    if (!signature) {
+        if ([NSObject instancesRespondToSelector:aSelector]) {
+            signature = [NSObject instanceMethodSignatureForSelector:aSelector];
+        }
+    }
+
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    
+//    if ([SUTRuntimeMethodHelper instancesRespondToSelector:anInvocation.selector]) {
+//        [anInvocation invokeWithTarget:_helper];
+//    }
+    
+    
+}
+
+//＊＊＊＊如果不指定就是 跑到NSObject里
+//forwardInvocation:就像一个未知消息的分发中心，将这些未知的消息转发给其它对象
+
+//如果转发的对象还不能处理，出发那个对象的消息转发到NSObject，
+//NSObject的forwardInvocation:方法实现只是简单调用了doesNotRecognizeSelector:方法，它不会转发任何消息。这样，如果不在以上所述的三个步骤中处理未知消息，则会引发一个异常。
+
+
+
 
 //json 解析里
 //- (void)setDataWithDic:(NSDictionary *)dic
