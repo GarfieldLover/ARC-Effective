@@ -2,22 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>UDPSocketServer.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>19</integer>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A91E9561AFA5EBE00C99AE9</key>
+		<key>BD0DFC671B01EEE400BC64CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A91E9691AFA5EBE00C99AE9</key>
+		<key>BD0DFC801B01EEE400BC64CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
