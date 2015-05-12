@@ -553,6 +553,20 @@
 			remoteGlobalIDString = D25329AA1719F4700090FB15;
 			remoteInfo = "MagcalRecord Example";
 		};
+		BD0DFC961B01EEE500BC64CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD0DFC911B01EEE400BC64CA /* operation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD0DFC681B01EEE400BC64CA;
+			remoteInfo = operation;
+		};
+		BD0DFC981B01EEE500BC64CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD0DFC911B01EEE400BC64CA /* operation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BD0DFC811B01EEE400BC64CA;
+			remoteInfo = operationTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1361,6 +1375,7 @@
 		0ACFC1DB1AFE61E90035EAFA /* 20140104145056078.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20140104145056078.png; sourceTree = "<group>"; };
 		0ACFC1DC1AFE61E90035EAFA /* BfIR32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BfIR32.png; sourceTree = "<group>"; };
 		0ACFC1E21AFE6C6F0035EAFA /* QnEZVz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QnEZVz.png; sourceTree = "<group>"; };
+		BD0DFC911B01EEE400BC64CA /* operation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operation.xcodeproj; path = operation/operation.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2870,6 +2885,7 @@
 				0A5380A71AF0E95900847D79 /* AppDelegate.m */,
 				0A5380AA1AF0E95900847D79 /* ViewController.m */,
 				0A5380A91AF0E95900847D79 /* ViewController.h */,
+				BD0DFC3D1B01EECE00BC64CA /* Operation */,
 				0AA0F4E31AFFAF500090A49D /* Runtime */,
 				0ACFC1E41AFE70730035EAFA /* WatchKit */,
 				0ACFC1341AFE4EA60035EAFA /* CoreData */,
@@ -3265,6 +3281,23 @@
 			path = WatchKit;
 			sourceTree = "<group>";
 		};
+		BD0DFC3D1B01EECE00BC64CA /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				BD0DFC911B01EEE400BC64CA /* operation.xcodeproj */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		BD0DFC921B01EEE400BC64CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD0DFC971B01EEE500BC64CA /* operation.app */,
+				BD0DFC991B01EEE500BC64CA /* operationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3385,6 +3418,10 @@
 				{
 					ProductGroup = 0ACFC16B1AFE4EAF0035EAFA /* Products */;
 					ProjectRef = 0ACFC16A1AFE4EAF0035EAFA /* MagcalRecord Example.xcodeproj */;
+				},
+				{
+					ProductGroup = BD0DFC921B01EEE400BC64CA /* Products */;
+					ProjectRef = BD0DFC911B01EEE400BC64CA /* operation.xcodeproj */;
 				},
 				{
 					ProductGroup = 0AA0F5171AFFB0730090A49D /* Products */;
@@ -3684,6 +3721,20 @@
 			fileType = wrapper.application;
 			path = "MagcalRecord Example.app";
 			remoteRef = 0ACFC1D21AFE4EAF0035EAFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BD0DFC971B01EEE500BC64CA /* operation.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = operation.app;
+			remoteRef = BD0DFC961B01EEE500BC64CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BD0DFC991B01EEE500BC64CA /* operationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = operationTests.xctest;
+			remoteRef = BD0DFC981B01EEE500BC64CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
