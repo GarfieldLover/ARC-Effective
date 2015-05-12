@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+　哈希表（Hash Table）是一种根据关键字直接访问内存存储位置的数据结构
 
 
 @implementation ViewController
