@@ -11,6 +11,68 @@
 　哈希表（Hash Table）是一种根据关键字直接访问内存存储位置的数据结构
 
 
+//xmpp就是 在GCDAsyncSocket上的封装，定了很多通信的协议，发送和接收
+- (void)keepAlive
+[asyncSocket writeData:keepAliveData
+           withTimeout:TIMEOUT_XMPP_WRITE
+                   tag:TAG_XMPP_WRITE_STREAM];
+//发送心跳，保持在线, 怕断
+
+
+MPP以Jabber协议为基础，而Jabber是即时通讯中常用的开放式协议。
+
+XMPPStream：xmpp基础服务类
+XMPPRoster：好友列表类
+XMPPRosterCoreDataStorage：好友列表（用户账号）在core data中的操作类
+XMPPvCardCoreDataStorage：好友名片（昵称，签名，性别，年龄等信息）在core data中的操作类
+XMPPvCardTemp：好友名片实体类，从数据库里取出来的都是它
+xmppvCardAvatarModule：好友头像
+XMPPReconnect：如果失去连接,自动重连
+XMPPRoom：提供多用户聊天支持
+XMPPPubSub：发布订阅
+
+//收到消息
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+//发送消息
+[[self xmppStream] sendElement:mes];
+//好友上下线通知
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+//获取完好友列表
+- (void)xmppRosterDidEndPopulating:(XMPPRoster *)sender
+//更新自己的名片信息
+- (void)updateMyvCardTemp:(XMPPvCardTemp *)vCardTemp;
+//收到添加好友的请求
+- (void)xmppRoster:(XMPPRoster *)sender didReceivePresenceSubscriptionRequest:(XMPPPresence *)presence
+  [self xmppRoster] removeUser:jid];
+
+//初始化聊天室
+XMPPJID *roomJID = [XMPPJID jidWithString:ROOM_JID];
+
+xmppRoom = [[XMPPRoom alloc] initWithRoomStorage:self jid:roomJID];
+//加入聊天室，使用昵称
+[xmppRoom joinRoomUsingNickname:@"quack" history:nil];
+//获取聊天室信息
+- (void)xmppRoomDidJoin:(XMPPRoom *)sender
+{
+    [xmppRoom fetchConfigurationForm];
+    [xmppRoom fetchBanList];
+    [xmppRoom fetchMembersList];
+    [xmppRoom fetchModeratorsList];
+}
+
+
+
+NSData *outgoingData = [outgoingStr dataUsingEncoding:NSUTF8StringEncoding];
+
+XMPPLogSend(@"SEND: %@", outgoingStr);
+numberOfBytesSent += [outgoingData length];
+
+[asyncSocket writeData:outgoingData
+           withTimeout:TIMEOUT_XMPP_WRITE
+                   tag:tag];
+
+
+
 @implementation ViewController
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
