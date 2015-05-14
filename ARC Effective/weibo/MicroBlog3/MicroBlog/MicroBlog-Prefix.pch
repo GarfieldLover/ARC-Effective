@@ -1,0 +1,26 @@
+//
+// Prefix header for all source files of the 'MicroBlog' target in the 'MicroBlog' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "FileHelpers.h"
+    #import "MBAppDelegate.h"
+
+
+
+#define MY_USER_EMAIL @"myUserEmail"
+#define MY_USER_PASSWORD @"myUserPassword"
+#define MY_USER_NICKNAME @"myUserNickname"
+#define MY_USER_DESCRIPTION @"myUserDescription"
+#define MY_USER_ID @"myUserId"
+
+
+#endif
