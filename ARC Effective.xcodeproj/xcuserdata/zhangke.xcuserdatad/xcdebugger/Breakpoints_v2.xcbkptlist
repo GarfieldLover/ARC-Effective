@@ -147,12 +147,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ARC Effective/Operation/operation/operation/ViewController.m"
-            timestampString = "453133175.265521"
+            filePath = "ARC Effective/GCD/GCD/GCD/ViewController.m"
+            timestampString = "453564795.330033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17">
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "-connection:didReceiveData:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

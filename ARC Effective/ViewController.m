@@ -14,8 +14,30 @@
 
 @implementation ViewController
 
+
++(BOOL)resolveInstanceMethod:(SEL)sel
+{
+
+}
+
+-(id)forwardingTargetForSelector:(SEL)aSelector
+{
+
+}
+
+-(NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+
+}
+
+-(void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     id obj=[[NSObject alloc] init];
     id temp=obj;
@@ -42,7 +64,38 @@
 
     NSLog(@"%@",self.obj11);
     
+    
+    
+    
+    //类，class，objc_class结构体
+    
+    //class指针，发消息就回去找class里的方法
+    //typedef struct objc_object *id;
+    
+//    类与对象操作函数
+//    动态创建类和对象
+//    2.属性操作函数，主要包含以下函数，对象和集合类的映射
+//    
+//    成员变量、属性
+//    关联对象(Associated Object)
+//    
+//    KVC
+    
+    //消息转发
+    
+    
+//    objc_property_t property = class_getProperty([self class], [propertyKey UTF8String]);
+//    
+//    // TODO: 针对特殊数据类型做处理
+//    NSString *attributeString = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
+//    
+//    ...
+//    
+//    [self setValue:obj forKey:propertyKey];
+    
+    
 }
+
 
 
 
