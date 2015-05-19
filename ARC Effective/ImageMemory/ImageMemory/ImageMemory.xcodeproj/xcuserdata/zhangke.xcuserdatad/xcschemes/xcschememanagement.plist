@@ -4,20 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>fmdbtest.xcscheme</key>
+		<key>ImageMemory.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>57</integer>
+			<integer>59</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A64B8EC1B08D7390015302B</key>
+		<key>0A64B9EB1B0B7DC60015302B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0A64B9051B08D73A0015302B</key>
+		<key>0A64BA041B0B7DC60015302B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

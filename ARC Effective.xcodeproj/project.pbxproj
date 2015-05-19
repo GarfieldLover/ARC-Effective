@@ -873,6 +873,34 @@
 			remoteGlobalIDString = 0A64B9061B08D73A0015302B;
 			remoteInfo = fmdbtestTests;
 		};
+		0A64B9DC1B0A378D0015302B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A64B9D71B0A378C0015302B /* background.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A64B9AE1B0A378C0015302B;
+			remoteInfo = background;
+		};
+		0A64B9DE1B0A378D0015302B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A64B9D71B0A378C0015302B /* background.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A64B9C71B0A378C0015302B;
+			remoteInfo = backgroundTests;
+		};
+		0A64BA1A1B0B7DC70015302B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A64BA151B0B7DC60015302B /* ImageMemory.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A64B9EC1B0B7DC60015302B;
+			remoteInfo = ImageMemory;
+		};
+		0A64BA1C1B0B7DC70015302B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A64BA151B0B7DC60015302B /* ImageMemory.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A64BA051B0B7DC60015302B;
+			remoteInfo = ImageMemoryTests;
+		};
 		0A64F06D1AF9DCEB00538144 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A64F05E1AF9DCEB00538144 /* Demo.xcodeproj */;
@@ -2035,6 +2063,8 @@
 		0A64B8BF1B08CFA80015302B /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		0A64B8C01B08CFA80015302B /* Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		0A64B9161B08D73A0015302B /* fmdbtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fmdbtest.xcodeproj; path = fmdbtest/fmdbtest.xcodeproj; sourceTree = "<group>"; };
+		0A64B9D71B0A378C0015302B /* background.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = background.xcodeproj; path = background/background.xcodeproj; sourceTree = "<group>"; };
+		0A64BA151B0B7DC60015302B /* ImageMemory.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImageMemory.xcodeproj; path = ImageMemory/ImageMemory.xcodeproj; sourceTree = "<group>"; };
 		0A64F0521AF9DCEB00538144 /* 1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.PNG; sourceTree = "<group>"; };
 		0A64F0531AF9DCEB00538144 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A64F0541AF9DCEB00538144 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -4135,6 +4165,8 @@
 				0A5380A71AF0E95900847D79 /* AppDelegate.m */,
 				0A5380A91AF0E95900847D79 /* ViewController.h */,
 				0A5380AA1AF0E95900847D79 /* ViewController.m */,
+				0A64B9E21B0B7DB80015302B /* ImageMemory */,
+				0A64B9731B0A376F0015302B /* background */,
 				0A64B8941B08CFA80015302B /* FMDB */,
 				0A64B7171B0883680015302B /* runtimeParser */,
 				0AB9A5811B073426007629A3 /* GCD */,
@@ -4314,6 +4346,40 @@
 			children = (
 				0A64B91C1B08D73B0015302B /* fmdbtest.app */,
 				0A64B91E1B08D73B0015302B /* fmdbtestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A64B9731B0A376F0015302B /* background */ = {
+			isa = PBXGroup;
+			children = (
+				0A64B9D71B0A378C0015302B /* background.xcodeproj */,
+			);
+			path = background;
+			sourceTree = "<group>";
+		};
+		0A64B9D81B0A378C0015302B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A64B9DD1B0A378D0015302B /* background.app */,
+				0A64B9DF1B0A378D0015302B /* backgroundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A64B9E21B0B7DB80015302B /* ImageMemory */ = {
+			isa = PBXGroup;
+			children = (
+				0A64BA151B0B7DC60015302B /* ImageMemory.xcodeproj */,
+			);
+			path = ImageMemory;
+			sourceTree = "<group>";
+		};
+		0A64BA161B0B7DC60015302B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A64BA1B1B0B7DC70015302B /* ImageMemory.app */,
+				0A64BA1D1B0B7DC70015302B /* ImageMemoryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4775,6 +4841,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 0A64B9D81B0A378C0015302B /* Products */;
+					ProjectRef = 0A64B9D71B0A378C0015302B /* background.xcodeproj */;
+				},
+				{
 					ProductGroup = 0A2B259A1AF7C99500EE0656 /* Products */;
 					ProjectRef = 0A2B25991AF7C99500EE0656 /* BonjourClient.xcodeproj */;
 				},
@@ -4833,6 +4903,10 @@
 				{
 					ProductGroup = 0A4016EA1AFBD09900AEFAB8 /* Products */;
 					ProjectRef = 0A4016E91AFBD09900AEFAB8 /* HYNetworking.xcodeproj */;
+				},
+				{
+					ProductGroup = 0A64BA161B0B7DC60015302B /* Products */;
+					ProjectRef = 0A64BA151B0B7DC60015302B /* ImageMemory.xcodeproj */;
 				},
 				{
 					ProductGroup = 0A64B77C1B0883810015302B /* Products */;
@@ -5131,6 +5205,34 @@
 			fileType = wrapper.cfbundle;
 			path = fmdbtestTests.xctest;
 			remoteRef = 0A64B91D1B08D73B0015302B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A64B9DD1B0A378D0015302B /* background.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = background.app;
+			remoteRef = 0A64B9DC1B0A378D0015302B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A64B9DF1B0A378D0015302B /* backgroundTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = backgroundTests.xctest;
+			remoteRef = 0A64B9DE1B0A378D0015302B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A64BA1B1B0B7DC70015302B /* ImageMemory.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ImageMemory.app;
+			remoteRef = 0A64BA1A1B0B7DC70015302B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A64BA1D1B0B7DC70015302B /* ImageMemoryTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ImageMemoryTests.xctest;
+			remoteRef = 0A64BA1C1B0B7DC70015302B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0A64F06E1AF9DCEB00538144 /* Demo.app */ = {
