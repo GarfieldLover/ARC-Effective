@@ -30,7 +30,8 @@
     
     //GCD，追加block的FIFO队列， atomic 的排他控制信号量 ，管理线程的C语言容器，数组，链表吧
     
-    //instrament，arc下差不多什么问题，mrc循环引用查不出，其它能查出
+    //instrament，arc下差不多什么问题，mrc循环引用查不出，其它能查出,
+    //---------------ciyle能查出循环引用
     //NSNotificationCenter timer等 也查不出来
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(xx) name:@"xxx" object:nil];
 
